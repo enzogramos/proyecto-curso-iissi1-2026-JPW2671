@@ -1,6 +1,6 @@
-# Título Proyecto
+# ComponentUS
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L8-AM-G1
 
 1. Letrán Rodríguez, Julio
 2. Baya Rodríguez, Mario
