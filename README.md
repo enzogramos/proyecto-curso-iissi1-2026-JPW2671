@@ -2,10 +2,9 @@
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Letrán Rodríguez, Julio
+2. Baya Rodríguez, Mario
+3. Ramos Andrés, Enzo
 
 ## 1. Introducción al problema
 
