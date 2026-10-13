@@ -46,53 +46,178 @@ Se requiere el desarrollo de un sistema de información que permita digitalizar 
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
+El sistema deberá gestionar el catálogo de clases ofertadas, permitir la inscripción y control de pagos de los socios, automatizar el proceso de reserva de plazas asegurando que no se supere el aforo, y proveer interfaces adaptadas a los distintos tipos de usuarios.
+
+Además, el sistema deberá integrar un módulo de ventas para la tienda que calcule automáticamente descuentos según el tipo de suscripción. También gestionará la agenda individual de los entrenadores personales y el control de acceso lógico a la máquina de bebidas isotónicas.
+
 
 ### 3.2. Usuarios del sistema
+
+ - Socio: Interactúa con el sistema para ver el horario, reservar clases y gestionar su suscripción.
+
+ - Monitor: Utiliza el sistema para consultar su calendario de clases asignadas y pasar lista de los asistentes.
+
+ - Entrenador Personal: Utiliza el sistema para gestionar su disponibilidad, aceptar o rechazar reservas de sesiones individuales y consultar el historial de los socios a los que entrena.
+
+ - Administrador: Encargado de dar de alta nuevas clases, gestionar monitores y supervisar el estado de los pagos y suscripciones.
+
 
 ## 4. Catálogo de requisitos
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+#### R.F.01. Reservar plaza en clase dirigida
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como Socio
+quiero reservar una plaza en una clase dirigida
+para asegurar mi asistencia y no quedarme sin espacio.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+ - Comprobar que el sistema descuenta una plaza del aforo total disponible para esa clase concreta.
+ - Comprobar que el sistema no permite la reserva si la clase ya ha alcanzado su aforo máximo.
+ - Se deben aplicar las reglas de negocio R.N.01, R.N.02 y R.N.05. 
+
+#### R.F.02. Reservar sesión con Entrenador Personal
+Como Socio
+quiero reservar una sesión individual con un entrenador personal en un tramo horario disponible
+para recibir un entrenamiento adaptado a mis objetivos.
+
+**Prueba de aceptación**
+- Comprobar que el tramo horario seleccionado queda bloqueado y no puede ser reservado por otro socio simultáneamente.
+- Comprobar que el entrenador personal recibe una notificación o actualización en su calendario sobre la nueva sesión.
+
+#### R.F.03. Registrar venta en tienda
+
+Como Administrador
+quiero registrar la venta de un producto de la tienda asociándola a un socio
+para llevar el control de ingresos y actualizar el stock del inventario.
+
+**Prueba de aceptación**
+- Comprobar que el stock del producto disminuye exactamente en la cantidad vendida.
+- Comprobar que el precio final a cobrar se calcula correctamente.
+- Se debe aplicar la regla de negocio R.N.04.  
+
+#### R.F.04. Dispensar bebida isotónica
+
+Como Socio
+quiero identificarme en la máquina de bebidas del gimnasio
+para obtener una consumición sin necesidad de pasar por recepción.
+
+**Prueba de aceptación**
+ - Comprobar que el sistema verifica el tipo de suscripción activa del usuario antes de habilitar el dispensador.
+ - Se debe aplicar la regla de negocio R.N.03. 
+
+#### R.F.05. Control de acceso a las instalaciones
+
+Como Socio
+quiero escanear mi código QR personal en el torno de entrada
+para acceder a las instalaciones del gimnasio de forma autónoma.
+
+**Prueba de aceptación**
+- Comprobar que el torno se desbloquea si el código QR es válido y la suscripción está activa.
+- Comprobar que el sistema deniega el acceso y muestra un aviso en recepción si el socio tiene recibos pendientes.
+- Se debe aplicar la regla de negocio R.N.06 y R.N.07.  
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+##### R.I.01. Información de la suscripción del socio
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como Administrador
+quiero ver los detalles del plan contratado por un socio
+para comprobar su modalidad de suscripción y si está al corriente de pago.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
+- Comprobar que se muestra el tipo de plan (Normal o Pro), la fecha de inicio, y la fecha de próxima renovación.
+- Comprobar que se muestran los datos personales básicos asociados al socio.  
+
+##### R.I.02. Historial de compras del socio
+Como Administrador
+quiero consultar el historial de productos comprados por un socio en la tienda
+para resolver dudas sobre facturación, garantías o devoluciones.
+
+**Prueba de aceptación**
+- Comprobar que se muestra una lista cronológica con la fecha, el producto, la cantidad y el precio final pagado.
+- Comprobar que se indica claramente si en la compra se aplicó algún descuento especial por su tipo de suscripción. 
+
+##### R.I.03. Calendario de clases y sesiones
+
+Como Monitor / Entrenador Personal
+quiero visualizar mi horario semanal de clases grupales y sesiones individuales
+para preparar el material necesario y conocer a los asistentes con antelación.
+
+**Prueba de aceptación**
+- Comprobar que se muestran ordenadas cronológicamente las sesiones asignadas al empleado en la semana en curso.
+- Comprobar que se puede acceder al listado actualizado de socios apuntados a cada clase o sesión.
+
+##### R.I.04. Consulta del estado de la suscripción propia
+Como Socio
+quiero consultar los detalles de mi suscripción actual
+para saber qué plan tengo activo, cuándo se me cobrará el próximo recibo y si tengo pagos pendientes.
+**Prueba de aceptación**
+- Comprobar que se muestra de forma clara el tipo de plan contratado (Normal o Pro).
+- Comprobar que se indica la fecha del próximo cobro o renovación.
+- Comprobar que el sistema avisa visualmente si existe algún recibo pendiente de pago. 
+
 
 #### 4.1.2. Reglas de negocio
 
-##### R.N.01. Título regla negocio
+##### R.N.01. Límite de reservas por suscripción
 
-Descripción de la regla de negocio.
+Un socio con "Plan Normal" solo puede tener activas un máximo de 2 reservas a clases dirigidas por semana natural. Un socio con "Plan Pro" no tiene límite de reservas, sujeto únicamente a la disponibilidad de aforo de la clase.
+
+##### R.N.02. Antelación de reserva
+
+Ningún socio puede reservar una plaza en una clase dirigida con más de 7 días de antelación ni con menos de 1 hora antes del comienzo previsto para la misma.
+
+##### R.N.03. Límite de dispensación de bebidas
+
+El acceso a la máquina de bebidas gratuitas está restringido exclusivamente a los socios con "Plan Pro" activo. Para evitar abusos, un mismo socio solo puede dispensar una bebida cada 45 minutos.
+
+##### R.N.04. Descuento en tienda por fidelidad
+
+El sistema aplicará de forma automática y obligatoria un 15% de descuento sobre el precio de venta al público en todos los productos de la tienda si el comprador tiene una suscripción "Plan Pro" activa y al corriente de pago en el momento exacto de la compra.
+
+##### R.N.05. Control de aforo estricto
+
+Bajo ninguna circunstancia el sistema permitirá que el número de reservas activas para una clase dirigida supere el aforo máximo establecido para la sala física donde se imparte dicha actividad.
+
+##### R.N.06. Restricción de acceso por impago
+
+El sistema denegará automáticamente el acceso físico a las instalaciones a cualquier socio que tenga uno o más recibos devueltos o pendientes de pago, independientemente del tipo de plan (Normal o Pro) que tenga contratado.
+
+##### R.N.07. Acceso intransferible
+
+El código QR de acceso generado por el sistema es único e intransferible y se regenerará dinámicamente cada 30 segundos desde la app del gimnasio. Si el sistema detecta que un mismo QR intenta usarse en los tornos de entrada con una diferencia menor a 5 minutos, el segundo acceso será bloqueado por posible intento de fraude.
+
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
+A continuación, se detalla el flujo cronológico y lógico de interacción del socio con el sistema:
+
+| FASE 1: Registro y Gestión | FASE 2: Acceso a Instalaciones | FASE 3: Reservas Deportivas | FASE 4: Consumo Premium |
+|:---|:---|:---|:---|
+| **R.F.** Alta en el sistema y selección de plan | **R.F.05.** Control de acceso por código QR | **R.F.01.** Reservar clase dirigida | **R.F.04.** Uso de máquina de bebidas |
+| **R.I.04.** Consulta del estado de la suscripción | *Validación R.N.06 y R.N.07 (Restricciones)* | **R.F.02.** Reservar sesión con Entrenador | **R.F.03.** Compras en tienda (TPV) |
+| *Acciones administrativas* | *Generación de QR dinámico* | *Validación R.N.01 y R.N.05 (Aforos)* | *Validación R.N.03 y R.N.04 (Descuentos)* |
 ### 4.3. Requisitos no funcionales (opcional)
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+**R.N.F. 01. Tiempo de respuesta del código QR**
 
+Como Socio
+quiero que el sistema valide mi código QR en el torno en menos de 2 segundos
+para evitar que se formen colas en la entrada de las instalaciones.
+
+**R.N.F. 02. Disponibilidad del sistema de reservas**
+
+Como Socio
+quiero que la plataforma de reservas esté disponible 24/7
+para poder gestionar mis clases en cualquier momento, incluso cuando el gimnasio está cerrado.
+
+**R.N.F. 03. Adaptabilidad a dispositivos móviles**
+
+Como Socio o Entrenador Personal
+quiero que la interfaz web se adapte perfectamente a las pantallas de los teléfonos móviles
+para poder reservar clases, fichar o consultar el horario sin necesidad de usar un ordenador de escritorio.
 -- fin entregable 1 --
 
 ## 5. Modelo conceptual
