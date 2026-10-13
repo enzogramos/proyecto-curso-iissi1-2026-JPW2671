@@ -218,6 +218,7 @@ para poder gestionar mis clases en cualquier momento, incluso cuando el gimnasio
 Como Socio o Entrenador Personal
 quiero que la interfaz web se adapte perfectamente a las pantallas de los teléfonos móviles
 para poder reservar clases, fichar o consultar el horario sin necesidad de usar un ordenador de escritorio.
+
 -- fin entregable 1 --
 
 ## 5. Modelo conceptual
