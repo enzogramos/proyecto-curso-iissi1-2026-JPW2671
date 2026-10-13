@@ -153,6 +153,7 @@ para preparar el material necesario y conocer a los asistentes con antelación.
 Como Socio
 quiero consultar los detalles de mi suscripción actual
 para saber qué plan tengo activo, cuándo se me cobrará el próximo recibo y si tengo pagos pendientes.
+
 **Prueba de aceptación**
 - Comprobar que se muestra de forma clara el tipo de plan contratado (Normal o Pro).
 - Comprobar que se indica la fecha del próximo cobro o renovación.
