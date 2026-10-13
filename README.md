@@ -1,4 +1,4 @@
-# ComponentUS
+# FitUS
 
 ## Miembros del grupo L8-AM-G1
 
@@ -8,11 +8,40 @@
 
 ## 1. Introducción al problema
 
-- Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
+El gimnasio "FitUS" ha experimentado un crecimiento notable de clientes durante los últimos meses y ha decidido ampliar sus servicios. En estos momentos, la gestión de las inscripciones, el control de aforo de las clases dirigidas (como Aeróbic o Zumba) y la gestion de cobros y suscripciones se realiza mediante hojas de cálculo y documentos físicos que dificultan la organización.
+
+### Situación actual y problemas:
+La gestión manual del gimnasio está provocando una serie de problemas críticos en el día a día:
+ - Sobrecarga en clases dirigidas: El aforo en las clases mas populares se suele superar ya que los clientes no pueden reservar con antelación y entran por orden de llegada, generando quejas y problemas de espacio.
+
+ - Descontrol en los planes de suscripción y ventajas: El gimnasio ofrece un plan "Básico" (acceso al gimnasio y a 2 clases a la semana) y un plan "Ultimate" (acceso ilimitado a todas las instalaciones). Recientemente se ha instalado una máquina dispensadora de bebidas isotónicas y se ha abierto una pequeña tienda de suplementación deportiva. La recepción está teniendo problemas para verificar qué clientes tienen el plan Ultimate para permitirles usar la máquina de bebidas sin coste o para aplicarles los descuentos exclusivos en la tienda, lo que ralentiza el servicio y provoca pérdidas económicas.
+ 
+
+ - Conflictos con los Entrenadores Personales: Además de los monitores de las clases grupales, el gimnasio ha incorporado entrenadores personales como un servicio añadido. Llevar la agenda de estos entrenamientos privados en papel está provocando confusiones con los horarios y que a veces se olvide cobrar la sesión al cliente.
+
+### Expectativas del sistema:
+Se requiere el desarrollo de un sistema de información que permita digitalizar toda la gestión del club. El sistema debe permitir a los socios gestionar su plan (Básico o Ultimate) y realizar reservas tanto para clases dirigidas como para sesiones con entrenadores personales. Además, el software deberá integrar un módulo de punto de venta (TPV) para la tienda que aplique descuentos automáticamente según el plan del usuario, y gestionar de forma automatizada los permisos de acceso a las ventajas premium, como la máquina de bebidas.
 
 ## 2. Glosario de términos
+ - Aforo: Número máximo de personas permitidas en una instalación o en una clase dirigida específica.
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+ - Clase Dirigida: Actividad deportiva impartida por un monitor en un horario específico (ej. Aeróbic, Zumba) a la que los socios pueden asistir reservando previamente.
+
+ - Monitor: Empleado del gimnasio encargado de impartir las clases dirigidas.
+
+ - Plan Básico: Modalidad de suscripción básica que permite el uso de las instalaciones y un número limitado de 2 reservas en clases dirigidas a la semana.
+
+ - Plan Ultimate: Modalidad de suscripción premium que permite el acceso ilimitado a las instalaciones y reservas ilimitadas en las clases, así como a la máquina de bebidas. Cuenta también con descuentos en la tienda.
+
+ - Socio (o Cliente): Usuario registrado en el gimnasio que abona una cuota periódica mediante un plan de suscripción.
+   
+ - Entrenador Personal: Profesional del gimnasio que ofrece sesiones individuales y personalizadas a los socios, fuera del horario de las clases grupales.
+
+ - Máquina de Bebidas: Dispensador automático de bebidas isotónicas cuyo uso gratuito está restringido a los socios con suscripción Ultimate.
+
+ - TPV (Terminal de Punto de Venta): Módulo del sistema informático utilizado en la recepción para registrar las ventas de los productos de la tienda.
+
+ - Tienda: Espacio físico en el gimnasio donde se venden productos como suplementación deportiva o accesorios.
 
 ## 3. Visión general del sistema
 
