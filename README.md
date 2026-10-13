@@ -22,6 +22,8 @@ La gestión manual del gimnasio está provocando una serie de problemas crítico
 ### Expectativas del sistema:
 Se requiere el desarrollo de un sistema de información que permita digitalizar toda la gestión del club. El sistema debe permitir a los socios gestionar su plan (Básico o Ultimate) y realizar reservas tanto para clases dirigidas como para sesiones con entrenadores personales. Además, el software deberá integrar un módulo de punto de venta (TPV) para la tienda que aplique descuentos automáticamente según el plan del usuario, y gestionar de forma automatizada los permisos de acceso a las ventajas premium, como la máquina de bebidas.
 
+<img width="1022" height="569" alt="imagen" src="https://github.com/user-attachments/assets/7fdbc06e-2f83-4790-a5da-d80a81777982" />
+
 ## 2. Glosario de términos
  - Aforo: Número máximo de personas permitidas en una instalación o en una clase dirigida específica.
 
