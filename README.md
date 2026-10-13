@@ -17,7 +17,7 @@ La gestión manual del gimnasio está provocando una serie de problemas crítico
  - Descontrol en los planes de suscripción y ventajas: El gimnasio ofrece un plan "Básico" (acceso al gimnasio y a 2 clases a la semana) y un plan "Ultimate" (acceso ilimitado a todas las instalaciones). Recientemente se ha instalado una máquina dispensadora de bebidas isotónicas y se ha abierto una pequeña tienda de suplementación deportiva. La recepción está teniendo problemas para verificar qué clientes tienen el plan Ultimate para permitirles usar la máquina de bebidas sin coste o para aplicarles los descuentos exclusivos en la tienda, lo que ralentiza el servicio y provoca pérdidas económicas.
  
 
- - Conflictos con los Entrenadores Personales: Además de los monitores de las clases grupales, el gimnasio ha incorporado entrenadores personales como un servicio añadido. Llevar la agenda de estos entrenamientos privados en papel está provocando confusiones con los horarios y que a veces se olvide cobrar la sesión al cliente.
+ - Conflictos con los Entrenadores Personales: Además de los monitores de clases grupales, el gimnasio ha incorporado entrenadores personales como un servicio añadido. Estas sesiones privadas no están incluidas en las cuotas habituales (Básico o Ultimate), sino que se abonan aparte. Actualmente, la gestión de estas agendas se realiza en papel, lo que está provocando dos problemas graves: por un lado, continuos solapamientos en los horarios de las citas; y por otro, una falta de control en la facturación, impartiéndose a menudo sesiones sin haber comprobado previamente si el cliente ha pagado por este servicio extra.
 
 ### Expectativas del sistema:
 Se requiere el desarrollo de un sistema de información que permita digitalizar toda la gestión del club. El sistema debe permitir a los socios gestionar su plan (Básico o Ultimate) y realizar reservas tanto para clases dirigidas como para sesiones con entrenadores personales. Además, el software deberá integrar un módulo de punto de venta (TPV) para la tienda que aplique descuentos automáticamente según el plan del usuario, y gestionar de forma automatizada los permisos de acceso a las ventajas premium, como la máquina de bebidas.
@@ -49,6 +49,8 @@ Se requiere el desarrollo de un sistema de información que permita digitalizar 
 El sistema deberá gestionar el catálogo de clases ofertadas, permitir la inscripción y control de pagos de los socios, automatizar el proceso de reserva de plazas asegurando que no se supere el aforo, y proveer interfaces adaptadas a los distintos tipos de usuarios.
 
 Además, el sistema deberá integrar un módulo de ventas para la tienda que calcule automáticamente descuentos según el tipo de suscripción. También gestionará la agenda individual de los entrenadores personales y el control de acceso lógico a la máquina de bebidas isotónicas.
+
+El sistema también deberá gestionar un registro de cobros para servicios adicionales fuera de cuota, manteniendo un saldo de sesiones pagadas y pendientes de disfrutar para cada usuario.
 
 
 ### 3.2. Usuarios del sistema
@@ -83,8 +85,9 @@ quiero reservar una sesión individual con un entrenador personal en un tramo ho
 para recibir un entrenamiento adaptado a mis objetivos.
 
 **Prueba de aceptación**
-- Comprobar que el tramo horario seleccionado queda bloqueado y no puede ser reservado por otro socio simultáneamente.
-- Comprobar que el entrenador personal recibe una notificación o actualización en su calendario sobre la nueva sesión.
+- Comprobar que el tramo horario seleccionado queda bloqueado.
+- Comprobar que el sistema descuenta automáticamente una sesión del saldo de bonos pagados por el cliente.
+- Se debe aplicar la regla de negocio R.N.08. 
 
 #### R.F.03. Registrar venta en tienda
 
@@ -116,7 +119,16 @@ para acceder a las instalaciones del gimnasio de forma autónoma.
 **Prueba de aceptación**
 - Comprobar que el torno se desbloquea si el código QR es válido y la suscripción está activa.
 - Comprobar que el sistema deniega el acceso y muestra un aviso en recepción si el socio tiene recibos pendientes.
-- Se debe aplicar la regla de negocio R.N.06 y R.N.07.  
+- Se debe aplicar la regla de negocio R.N.06 y R.N.07.
+
+#### R.F.06. Comprar bono de sesiones de Entrenador Personal
+
+Como Socio
+quiero comprar de forma individual o en bonos sesiones de entrenamiento personal
+para tener saldo disponible y poder agendar citas con los entrenadores.
+
+**Prueba de aceptación**
+- Comprobar que, tras registrarse el pago, el saldo de sesiones extra del socio aumenta en la cantidad comprada.
 
 #### 4.1.1. Requisitos de información
 
@@ -157,7 +169,8 @@ para saber qué plan tengo activo, cuándo se me cobrará el próximo recibo y s
 **Prueba de aceptación**
 - Comprobar que se muestra de forma clara el tipo de plan contratado (Normal o Pro).
 - Comprobar que se indica la fecha del próximo cobro o renovación.
-- Comprobar que el sistema avisa visualmente si existe algún recibo pendiente de pago. 
+- Comprobar que el sistema avisa visualmente si existe algún recibo pendiente de pago.
+- Comprobar que se muestra el saldo actual de sesiones de entrenador personal pagadas y pendientes de utilizar.
 
 
 #### 4.1.2. Reglas de negocio
@@ -190,16 +203,22 @@ El sistema denegará automáticamente el acceso físico a las instalaciones a cu
 
 El código QR de acceso generado por el sistema es único e intransferible y se regenerará dinámicamente cada 30 segundos desde la app del gimnasio. Si el sistema detecta que un mismo QR intenta usarse en los tornos de entrada con una diferencia menor a 5 minutos, el segundo acceso será bloqueado por posible intento de fraude.
 
+##### R.N.08. Saldo positivo para entrenamientos personales
+
+El sistema denegará cualquier intento de reserva de una sesión con un Entrenador Personal si el socio no dispone de al menos una (1) sesión extra pagada y no consumida en su saldo, independientemente de si el usuario posee un Plan Básico o Plan Ultimate.
+
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
 A continuación, se detalla el flujo cronológico y lógico de interacción del socio con el sistema:
 
-| FASE 1: Registro y Gestión | FASE 2: Acceso a Instalaciones | FASE 3: Reservas Deportivas | FASE 4: Consumo Premium |
+| FASE 1: Registro y Gestión | FASE 2: Acceso a Instalaciones | FASE 3: Reservas Deportivas | FASE 4: Consumo Premium y Tienda |
 |:---|:---|:---|:---|
-| **R.F.** Alta en el sistema y selección de plan | **R.F.05.** Control de acceso por código QR | **R.F.01.** Reservar clase dirigida | **R.F.04.** Uso de máquina de bebidas |
-| **R.I.04.** Consulta del estado de la suscripción | *Validación R.N.06 y R.N.07 (Restricciones)* | **R.F.02.** Reservar sesión con Entrenador | **R.F.03.** Compras en tienda (TPV) |
-| *Acciones administrativas* | *Generación de QR dinámico* | *Validación R.N.01 y R.N.05 (Aforos)* | *Validación R.N.03 y R.N.04 (Descuentos)* |
+| **R.F.** Alta en el sistema y selección de plan (Normal/Pro) | **R.F.05.** Control de acceso por código QR | **R.F.01.** Reservar plaza en clase dirigida | **R.F.04.** Dispensar bebida isotónica |
+| **R.I.04.** Consulta del estado de la suscripción propia | *Validación R.N.06 (Restricción por impago)* | **R.F.06.** Comprar bono de sesiones de Entrenador Personal | **R.F.03.** Registrar venta en tienda (TPV) |
+| *Acciones administrativas de alta y cobro* | *Validación R.N.07 (Acceso intransferible)* | **R.F.02.** Reservar sesión con Entrenador Personal | *Validación R.N.03 (Límite de bebidas por tiempo)* |
+| | | *Validación R.N.01 y R.N.05 (Aforos y límites de clases)* | *Validación R.N.04 (Descuento Pro en tienda)* |
+| | | *Validación R.N.08 (Saldo positivo para entrenamientos)* | |
 ### 4.3. Requisitos no funcionales (opcional)
 
 **R.N.F. 01. Tiempo de respuesta del código QR**
