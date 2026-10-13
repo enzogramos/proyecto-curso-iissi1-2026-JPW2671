@@ -68,6 +68,18 @@ El sistema también deberá gestionar un registro de cobros para servicios adici
 
 ### 4.1. Requisitos funcionales
 
+#### R.F.00. Registro de nuevo socio y selección de plan
+
+Como Futuro Socio (o Administrador en recepción)
+quiero darme de alta en el sistema introduciendo mis datos personales y eligiendo un plan de suscripción (Básico o Ultimate)
+para poder empezar a utilizar las instalaciones y servicios del gimnasio.
+
+**Prueba de aceptación**
+ - Comprobar que el sistema guarda correctamente los datos personales (Nombre, DNI, Email, Datos de pago).
+ - Comprobar que el estado del usuario pasa a ser "Activo" una vez se registra el primer pago asociado al plan elegido.
+ - Comprobar que el sistema genera automáticamente el código QR inicial de acceso tras completar el alta.
+ - Se debe aplicar la regla de negocio R.N.09. 
+
 #### R.F.01. Reservar plaza en clase dirigida
 
 Como Socio
@@ -206,6 +218,10 @@ El código QR de acceso generado por el sistema es único e intransferible y se 
 ##### R.N.08. Saldo positivo para entrenamientos personales
 
 El sistema denegará cualquier intento de reserva de una sesión con un Entrenador Personal si el socio no dispone de al menos una (1) sesión extra pagada y no consumida en su saldo, independientemente de si el usuario posee un Plan Básico o Plan Ultimate.
+
+##### R.N.09. Unicidad de socios y mayoría de edad
+
+El sistema no permitirá el registro de un nuevo socio si el DNI proporcionado ya existe en la base de datos vinculado a una cuenta activa o con deudas pendientes. Además, el socio debe confirmar ser mayor de 16 años para poder registrarse en cualquiera de los planes ofertados.
 
 
 ### 4.2. Mapa de historias de usuario (opcional)
