@@ -214,7 +214,7 @@ A continuación, se detalla el flujo cronológico y lógico de interacción del 
 
 | FASE 1: Registro y Gestión | FASE 2: Acceso a Instalaciones | FASE 3: Reservas Deportivas | FASE 4: Consumo Premium y Tienda |
 |:---|:---|:---|:---|
-| **R.F.** Alta en el sistema y selección de plan (Normal/Pro) | **R.F.05.** Control de acceso por código QR | **R.F.01.** Reservar plaza en clase dirigida | **R.F.04.** Dispensar bebida isotónica |
+| **R.F.** Alta en el sistema y selección de plan (Básico/Ultimate) | **R.F.05.** Control de acceso por código QR | **R.F.01.** Reservar plaza en clase dirigida | **R.F.04.** Dispensar bebida isotónica |
 | **R.I.04.** Consulta del estado de la suscripción propia | *Validación R.N.06 (Restricción por impago)* | **R.F.06.** Comprar bono de sesiones de Entrenador Personal | **R.F.03.** Registrar venta en tienda (TPV) |
 | *Acciones administrativas de alta y cobro* | *Validación R.N.07 (Acceso intransferible)* | **R.F.02.** Reservar sesión con Entrenador Personal | *Validación R.N.03 (Límite de bebidas por tiempo)* |
 | | | *Validación R.N.01 y R.N.05 (Aforos y límites de clases)* | *Validación R.N.04 (Descuento Pro en tienda)* |
