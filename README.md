@@ -37,7 +37,7 @@ Se requiere el desarrollo de un sistema de información que permita digitalizar 
 
  - Socio (o Cliente): Usuario registrado en el gimnasio que abona una cuota periódica mediante un plan de suscripción.
    
- - Entrenador Personal: Profesional del gimnasio que ofrece sesiones individuales y personalizadas a los socios, fuera del horario de las clases grupales.
+ - Entrenador Personal: Últimatefesional del gimnasio que ofrece sesiones individuales y personalizadas a los socios, fuera del horario de las clases grupales.
 
  - Máquina de Bebidas: Dispensador automático de bebidas isotónicas cuyo uso gratuito está restringido a los socios con suscripción Ultimate.
 
@@ -153,7 +153,7 @@ quiero ver los detalles del plan contratado por un socio
 para comprobar su modalidad de suscripción y si está al corriente de pago.
 
 **Prueba de aceptación**
-- Comprobar que se muestra el tipo de plan (Normal o Pro), la fecha de inicio, y la fecha de próxima renovación.
+- Comprobar que se muestra el tipo de plan (Básico o Últimate), la fecha de inicio, y la fecha de próxima renovación.
 - Comprobar que se muestran los datos personales básicos asociados al socio.  
 
 ##### R.I.02. Historial de compras del socio
@@ -181,7 +181,7 @@ quiero consultar los detalles de mi suscripción actual
 para saber qué plan tengo activo, cuándo se me cobrará el próximo recibo y si tengo pagos pendientes.
 
 **Prueba de aceptación**
-- Comprobar que se muestra de forma clara el tipo de plan contratado (Normal o Pro).
+- Comprobar que se muestra de forma clara el tipo de plan contratado (Básico o Últimate).
 - Comprobar que se indica la fecha del próximo cobro o renovación.
 - Comprobar que el sistema avisa visualmente si existe algún recibo pendiente de pago.
 - Comprobar que se muestra el saldo actual de sesiones de entrenador personal pagadas y pendientes de utilizar.
@@ -191,7 +191,7 @@ para saber qué plan tengo activo, cuándo se me cobrará el próximo recibo y s
 
 ##### R.N.01. Límite de reservas por suscripción
 
-Un socio con "Plan Normal" solo puede tener activas un máximo de 2 reservas a clases dirigidas por semana natural. Un socio con "Plan Pro" no tiene límite de reservas, sujeto únicamente a la disponibilidad de aforo de la clase.
+Un socio con "Plan Básico" solo puede tener activas un máximo de 2 reservas a clases dirigidas por semana natural. Un socio con "Plan Últimate" no tiene límite de reservas, sujeto únicamente a la disponibilidad de aforo de la clase.
 
 ##### R.N.02. Antelación de reserva
 
@@ -199,11 +199,11 @@ Ningún socio puede reservar una plaza en una clase dirigida con más de 7 días
 
 ##### R.N.03. Límite de dispensación de bebidas
 
-El acceso a la máquina de bebidas gratuitas está restringido exclusivamente a los socios con "Plan Pro" activo. Para evitar abusos, un mismo socio solo puede dispensar una bebida cada 45 minutos.
+El acceso a la máquina de bebidas gratuitas está restringido exclusivamente a los socios con "Plan Últimate" activo. Para evitar abusos, un mismo socio solo puede dispensar una bebida cada 45 minutos.
 
 ##### R.N.04. Descuento en tienda por fidelidad
 
-El sistema aplicará de forma automática y obligatoria un 15% de descuento sobre el precio de venta al público en todos los productos de la tienda si el comprador tiene una suscripción "Plan Pro" activa y al corriente de pago en el momento exacto de la compra.
+El sistema aplicará de forma automática y obligatoria un 15% de descuento sobre el precio de venta al público en todos los productos de la tienda si el comprador tiene una suscripción "Plan Últimate" activa y al corriente de pago en el momento exacto de la compra.
 
 ##### R.N.05. Control de aforo estricto
 
@@ -211,7 +211,7 @@ Bajo ninguna circunstancia el sistema permitirá que el número de reservas acti
 
 ##### R.N.06. Restricción de acceso por impago
 
-El sistema denegará automáticamente el acceso físico a las instalaciones a cualquier socio que tenga uno o más recibos devueltos o pendientes de pago, independientemente del tipo de plan (Normal o Pro) que tenga contratado.
+El sistema denegará automáticamente el acceso físico a las instalaciones a cualquier socio que tenga uno o más recibos devueltos o pendientes de pago, independientemente del tipo de plan (Básico o Últimate) que tenga contratado.
 
 ##### R.N.07. Acceso intransferible
 
@@ -235,7 +235,7 @@ A continuación, se detalla el flujo cronológico y lógico de interacción del 
 | **R.F.** Alta en el sistema y selección de plan (Básico/Ultimate) | **R.F.05.** Control de acceso por código QR | **R.F.01.** Reservar plaza en clase dirigida | **R.F.04.** Dispensar bebida isotónica |
 | **R.I.04.** Consulta del estado de la suscripción propia | *Validación R.N.06 (Restricción por impago)* | **R.F.06.** Comprar bono de sesiones de Entrenador Personal | **R.F.03.** Registrar venta en tienda (TPV) |
 | *Acciones administrativas de alta y cobro* | *Validación R.N.07 (Acceso intransferible)* | **R.F.02.** Reservar sesión con Entrenador Personal | *Validación R.N.03 (Límite de bebidas por tiempo)* |
-| | | *Validación R.N.01 y R.N.05 (Aforos y límites de clases)* | *Validación R.N.04 (Descuento Pro en tienda)* |
+| | | *Validación R.N.01 y R.N.05 (Aforos y límites de clases)* | *Validación R.N.04 (Descuento Últimate en tienda)* |
 | | | *Validación R.N.08 (Saldo positivo para entrenamientos)* | |
 ### 4.3. Requisitos no funcionales (opcional)
 
