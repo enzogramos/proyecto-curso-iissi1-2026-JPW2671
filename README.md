@@ -1,52 +1,52 @@
-# FitUS[cite: 1]
+# FitUS
 
-## Miembros del grupo L8-AM-G1[cite: 1]
+## Miembros del grupo L8-AM-G1
 
-1. Letrán Rodríguez, Julio[cite: 1]
-2. Baya Rodríguez, Mario[cite: 1]
-3. Ramos Andrés, Enzo[cite: 1]
+1. Letrán Rodríguez, Julio
+2. Baya Rodríguez, Mario
+3. Ramos Andrés, Enzo
 
-## 1. Introducción al problema[cite: 1]
+## 1. Introducción al problema
 
-El gimnasio "FitUS" ha experimentado un crecimiento notable de clientes durante los últimos meses y ha decidido ampliar sus servicios[cite: 1]. En estos momentos, la gestión de las inscripciones, el control de aforo de las clases dirigidas (como Aeróbic o Zumba) y la gestión de cobros y suscripciones se realiza mediante hojas de cálculo y documentos físicos que dificultan la organización[cite: 1].
+El gimnasio "FitUS" ha experimentado un crecimiento notable de clientes durante los últimos meses y ha decidido ampliar sus servicios. En estos momentos, la gestión de las inscripciones, el control de aforo de las clases dirigidas (como Aeróbic o Zumba) y la gestión de cobros y suscripciones se realiza mediante hojas de cálculo y documentos físicos que dificultan la organización.
 
-### Situación actual y problemas:[cite: 1]
-La gestión manual del gimnasio está provocando una serie de problemas críticos en el día a día:[cite: 1]
- - Sobrecarga en clases dirigidas: El aforo en las clases más populares se suele superar ya que los clientes no pueden reservar con antelación y entran por orden de llegada, generando quejas y problemas de espacio[cite: 1].
+### Situación actual y problemas:
+La gestión manual del gimnasio está provocando una serie de problemas críticos en el día a día:
+ - Sobrecarga en clases dirigidas: El aforo en las clases más populares se suele superar ya que los clientes no pueden reservar con antelación y entran por orden de llegada, generando quejas y problemas de espacio.
 
- - Descontrol en los planes de suscripción y ventajas: El gimnasio ofrece un plan "Básico" (acceso al gimnasio y a 2 clases a la semana) y un plan "Ultimate" (acceso ilimitado a todas las instalaciones)[cite: 1]. Recientemente se ha instalado una máquina dispensadora de bebidas isotónicas y se ha abierto una pequeña tienda de suplementación deportiva[cite: 1]. La recepción está teniendo problemas para verificar qué clientes tienen el plan Ultimate para permitirles usar la máquina de bebidas sin coste o para aplicarles los descuentos exclusivos en la tienda, lo que ralentiza el servicio y provoca pérdidas económicas[cite: 1].
+ - Descontrol en los planes de suscripción y ventajas: El gimnasio ofrece un plan "Básico" (acceso al gimnasio y a 2 clases a la semana) y un plan "Ultimate" (acceso ilimitado a todas las instalaciones). Recientemente se ha instalado una máquina dispensadora de bebidas isotónicas y se ha abierto una pequeña tienda de suplementación deportiva. La recepción está teniendo problemas para verificar qué clientes tienen el plan Ultimate para permitirles usar la máquina de bebidas sin coste o para aplicarles los descuentos exclusivos en la tienda, lo que ralentiza el servicio y provoca pérdidas económicas.
 
- - Conflictos con los Entrenadores Personales: Además de los monitores de clases grupales, el gimnasio ha incorporado entrenadores personales como un servicio añadido[cite: 1]. Estas sesiones privadas no están incluidas en las cuotas habituales (Básico o Ultimate), sino que se abonan aparte[cite: 1]. Actualmente, la gestión de estas agendas se realiza en papel, lo que está provocando dos problemas graves: por un lado, continuos solapamientos en los horarios de las citas; y por otro, una falta de control en la facturación, impartiéndose a menudo sesiones sin haber comprobado previamente si el cliente ha pagado por este servicio extra[cite: 1].
+ - Conflictos con los Entrenadores Personales: Además de los monitores de clases grupales, el gimnasio ha incorporado entrenadores personales como un servicio añadido. Estas sesiones privadas no están incluidas en las cuotas habituales (Básico o Ultimate), sino que se abonan aparte. Actualmente, la gestión de estas agendas se realiza en papel, lo que está provocando dos problemas graves: por un lado, continuos solapamientos en los horarios de las citas; y por otro, una falta de control en la facturación, impartiéndose a menudo sesiones sin haber comprobado previamente si el cliente ha pagado por este servicio extra.
 
-### Expectativas del sistema:[cite: 1]
-Se requiere el desarrollo de un sistema de información que permita digitalizar toda la gestión del club[cite: 1]. El sistema debe permitir a los socios gestionar su plan (Básico o Ultimate) y realizar reservas tanto para clases dirigidas como para sesiones con entrenadores personales[cite: 1]. Además, el software deberá integrar un módulo de punto de venta (TPV) para la tienda que aplique descuentos automáticamente según el plan del usuario, y gestionar de forma automatizada los permisos de acceso a las ventajas premium, como la máquina de bebidas[cite: 1].
+### Expectativas del sistema:
+Se requiere el desarrollo de un sistema de información que permita digitalizar toda la gestión del club. El sistema debe permitir a los socios gestionar su plan (Básico o Ultimate) y realizar reservas tanto para clases dirigidas como para sesiones con entrenadores personales. Además, el software deberá integrar un módulo de punto de venta (TPV) para la tienda que aplique descuentos automáticamente según el plan del usuario, y gestionar de forma automatizada los permisos de acceso a las ventajas premium, como la máquina de bebidas.
 
-<img width="1022" height="569" alt="imagen" src="https://github.com/user-attachments/assets/7fdbc06e-2f83-4790-a5da-d80a81777982" />[cite: 1]
+<img width="1022" height="569" alt="imagen" src="https://github.com/user-attachments/assets/7fdbc06e-2f83-4790-a5da-d80a81777982" />
 
-## 2. Glosario de términos[cite: 1]
- - Aforo: Número máximo de personas permitidas en una instalación o en una clase dirigida específica[cite: 1].
+## 2. Glosario de términos
+ - Aforo: Número máximo de personas permitidas en una instalación o en una clase dirigida específica.
 
- - Clase Dirigida: Actividad deportiva impartida por un monitor en un horario específico (ej. Aeróbic, Zumba) a la que los socios pueden asistir reservando previamente[cite: 1].
+ - Clase Dirigida: Actividad deportiva impartida por un monitor en un horario específico (ej. Aeróbic, Zumba) a la que los socios pueden asistir reservando previamente.
 
- - Monitor: Empleado del gimnasio encargado de impartir las clases dirigidas[cite: 1].
+ - Monitor: Empleado del gimnasio encargado de impartir las clases dirigidas.
 
- - Plan Básico: Modalidad de suscripción básica que permite el uso de las instalaciones y un número limitado de 2 reservas en clases dirigidas a la semana[cite: 1].
+ - Plan Básico: Modalidad de suscripción básica que permite el uso de las instalaciones y un número limitado de 2 reservas en clases dirigidas a la semana.
 
- - Plan Ultimate: Modalidad de suscripción premium que permite el acceso ilimitado a las instalaciones y reservas ilimitadas en las clases, así como a la máquina de bebidas[cite: 1]. Cuenta también con descuentos en la tienda[cite: 1].
+ - Plan Ultimate: Modalidad de suscripción premium que permite el acceso ilimitado a las instalaciones y reservas ilimitadas en las clases, así como a la máquina de bebidas. Cuenta también con descuentos en la tienda.
 
- - Socio (o Cliente): Usuario registrado en el gimnasio que abona una cuota periódica mediante un plan de suscripción[cite: 1].
+ - Socio (o Cliente): Usuario registrado en el gimnasio que abona una cuota periódica mediante un plan de suscripción.
    
- - Entrenador Personal: Profesional del gimnasio que ofrece sesiones individuales y personalizadas a los socios, fuera del horario de las clases grupales[cite: 1].
+ - Entrenador Personal: Profesional del gimnasio que ofrece sesiones individuales y personalizadas a los socios, fuera del horario de las clases grupales.
 
- - Máquina de Bebidas: Dispensador automático de bebidas isotónicas cuyo uso gratuito está restringido a los socios con suscripción Ultimate[cite: 1].
+ - Máquina de Bebidas: Dispensador automático de bebidas isotónicas cuyo uso gratuito está restringido a los socios con suscripción Ultimate.
 
- - TPV (Terminal de Punto de Venta): Módulo del sistema informático utilizado en la recepción para registrar las ventas de los productos de la tienda[cite: 1].
+ - TPV (Terminal de Punto de Venta): Módulo del sistema informático utilizado en la recepción para registrar las ventas de los productos de la tienda.
 
- - Tienda: Espacio físico en el gimnasio donde se venden productos como suplementación deportiva o accesorios[cite: 1].
+ - Tienda: Espacio físico en el gimnasio donde se venden productos como suplementación deportiva o accesorios.
 
-## 3. Visión general del sistema[cite: 1]
+## 3. Visión general del sistema
 
-### 3.1. Requisitos generales[cite: 1]
+### 3.1. Requisitos generales
 
 #### R.G.01. Gestión de socios, planes de suscripción y control de acceso
 
@@ -58,35 +58,35 @@ para digitalizar el control de miembros y asegurar que solo accedan a las instal
 
 Como Socio
 quiero consultar la oferta de clases dirigidas y reservar plaza con antelación respetando el aforo de cada sala y las condiciones de mi plan
-para asegurar mi asistencia a las actividades grupales evitando aglomeraciones[cite: 1].
+para asegurar mi asistencia a las actividades grupales evitando aglomeraciones.
 
 #### R.G.03. Gestión de entrenadores personales y bonos de sesiones extra
 
 Como Socio
-quiero adquirir bonos de sesiones adicionales fuera de cuota y reservar citas individuales en la agenda de los entrenadores personales[cite: 1]
-para recibir entrenamientos personalizados sin solapamientos horarios y con un control exacto de mi saldo de sesiones pagadas[cite: 1].
+quiero adquirir bonos de sesiones adicionales fuera de cuota y reservar citas individuales en la agenda de los entrenadores personales
+para recibir entrenamientos personalizados sin solapamientos horarios y con un control exacto de mi saldo de sesiones pagadas.
 
 #### R.G.04. Gestión de ventas en tienda (TPV) y ventajas del Plan Ultimate
 
 Como Administrador
-quiero registrar las ventas de productos en el TPV aplicando descuentos automáticos según el plan del socio y controlar el acceso automatizado a la máquina de bebidas isotónicas[cite: 1]
-para agilizar la atención en recepción, mantener actualizado el inventario y garantizar el uso exclusivo de los beneficios premium[cite: 1].
+quiero registrar las ventas de productos en el TPV aplicando descuentos automáticos según el plan del socio y controlar el acceso automatizado a la máquina de bebidas isotónicas
+para agilizar la atención en recepción, mantener actualizado el inventario y garantizar el uso exclusivo de los beneficios premium.
 
 
-### 3.2. Usuarios del sistema[cite: 1]
+### 3.2. Usuarios del sistema
 
- - Socio: Interactúa con el sistema para ver el horario, reservar clases y gestionar su suscripción[cite: 1].
+ - Socio: Interactúa con el sistema para ver el horario, reservar clases y gestionar su suscripción.
 
- - Monitor: Utiliza el sistema para consultar su calendario de clases asignadas y pasar lista de los asistentes[cite: 1].
+ - Monitor: Utiliza el sistema para consultar su calendario de clases asignadas y pasar lista de los asistentes.
 
- - Entrenador Personal: Utiliza el sistema para gestionar su disponibilidad, aceptar o rechazar reservas de sesiones individuales y consultar el historial de los socios a los que entrena[cite: 1].
+ - Entrenador Personal: Utiliza el sistema para gestionar su disponibilidad, aceptar o rechazar reservas de sesiones individuales y consultar el historial de los socios a los que entrena.
 
- - Administrador: Encargado de dar de alta nuevas clases, gestionar monitores y supervisar el estado de los pagos y suscripciones[cite: 1].
+ - Administrador: Encargado de dar de alta nuevas clases, gestionar monitores y supervisar el estado de los pagos y suscripciones.
 
 
-## 4. Catálogo de requisitos[cite: 1]
+## 4. Catálogo de requisitos
 
-### 4.1. Requisitos funcionales[cite: 1]
+### 4.1. Requisitos funcionales
 
 #### R.F.01. Consulta de recaudación total en tienda por categoría de producto
 
@@ -148,7 +148,7 @@ Como Entrenador Personal
 quiero consultar la duración media (`AVG`), mínima (`MIN`) y máxima (`MAX`) en minutos de las sesiones privadas impartidas agrupadas por cada socio entrenado (`GROUP BY`)
 para analizar la dedicación temporal y realizar un seguimiento de los entrenamientos personalizados.
 
-#### 4.1.1. Requisitos de información[cite: 1]
+#### 4.1.1. Requisitos de información
 
 ##### R.I.01. Información de socios y planes de suscripción
 
@@ -186,56 +186,56 @@ Como Administrador
 quiero registrar en la base de datos cada uso de la máquina de bebidas (identificador de dispensación, socio, tipo de bebida, volumen en mililitros y fecha/hora exacta) y los accesos por el torno de entrada (identificador de acceso, socio, código QR empleado, fecha/hora y estado de validación)
 para auditar el cumplimiento de los tiempos de uso en servicios exclusivos y la seguridad de entrada al recinto.
 
-#### 4.1.2. Reglas de negocio[cite: 1]
+#### 4.1.2. Reglas de negocio
 
 ##### R.N.01. Límite de reservas semanales por tipo de suscripción
 
-Un socio con "Plan Básico" solo puede tener activas un máximo de 2 reservas a clases dirigidas por semana natural[cite: 1]. Un socio con "Plan Ultimate" no tiene límite de reservas semanales, sujeto únicamente a la disponibilidad de aforo de la clase[cite: 1]. Mediante un *trigger*, el sistema verificará el número de reservas semanales del socio antes de insertar una nueva reserva grupal.
+Un socio con "Plan Básico" solo puede tener activas un máximo de 2 reservas a clases dirigidas por semana natural. Un socio con "Plan Ultimate" no tiene límite de reservas semanales, sujeto únicamente a la disponibilidad de aforo de la clase. Mediante un *trigger*, el sistema verificará el número de reservas semanales del socio antes de insertar una nueva reserva grupal.
 
-**Prueba de aceptación**[cite: 1]
+**Prueba de aceptación**
 - Comprobar que un socio con "Plan Básico" puede insertar correctamente hasta 2 reservas de clases dirigidas dentro de la misma semana natural.
 - Comprobar que el *trigger* bloquea la inserción y lanza un error si un socio con "Plan Básico" intenta registrar una tercera reserva en esa misma semana.
 - Comprobar que un socio con "Plan Ultimate" puede registrar más de 2 reservas en la misma semana sin que el *trigger* rechace la operación.
 
 ##### R.N.02. Control estricto de aforo máximo en clases dirigidas
 
-Bajo ninguna circunstancia el sistema permitirá que el número de reservas activas para una clase dirigida supere el aforo máximo establecido para la sala física donde se imparte dicha actividad[cite: 1]. Un *trigger* comprobará antes de cada inserción de reserva que el total de inscritos no iguale ni supere el aforo de la sala asignada.
+Bajo ninguna circunstancia el sistema permitirá que el número de reservas activas para una clase dirigida supere el aforo máximo establecido para la sala física donde se imparte dicha actividad. Un *trigger* comprobará antes de cada inserción de reserva que el total de inscritos no iguale ni supere el aforo de la sala asignada.
 
-**Prueba de aceptación**[cite: 1]
-- Comprobar que el sistema permite insertar la reserva de un socio cuando el número de reservas activas de la clase es inferior al aforo máximo de la sala[cite: 1].
-- Comprobar que el *trigger* aborta la inserción y muestra un mensaje de error cuando el número de plazas reservadas ya ha alcanzado el aforo máximo de la sala[cite: 1].
+**Prueba de aceptación**
+- Comprobar que el sistema permite insertar la reserva de un socio cuando el número de reservas activas de la clase es inferior al aforo máximo de la sala.
+- Comprobar que el *trigger* aborta la inserción y muestra un mensaje de error cuando el número de plazas reservadas ya ha alcanzado el aforo máximo de la sala.
 
 ##### R.N.03. Restricción y frecuencia de dispensación en máquina de bebidas
 
-El acceso a la máquina de bebidas gratuitas está restringido exclusivamente a los socios con "Plan Ultimate" activo y al corriente de pago[cite: 1]. Además, para evitar abusos, un mismo socio solo puede dispensar una bebida cada 45 minutos[cite: 1]. Un *trigger* validará el plan del socio y el tiempo transcurrido desde su última dispensación antes de insertar un nuevo registro de consumo.
+El acceso a la máquina de bebidas gratuitas está restringido exclusivamente a los socios con "Plan Ultimate" activo y al corriente de pago. Además, para evitar abusos, un mismo socio solo puede dispensar una bebida cada 45 minutos. Un *trigger* validará el plan del socio y el tiempo transcurrido desde su última dispensación antes de insertar un nuevo registro de consumo.
 
-**Prueba de aceptación**[cite: 1]
+**Prueba de aceptación**
 - Comprobar que el *trigger* impide registrar una dispensación si el socio pertenece al "Plan Básico" o tiene recibos impagados.
 - Comprobar que el *trigger* bloquea el registro de una nueva dispensación para un socio con "Plan Ultimate" si han transcurrido menos de 45 minutos desde su consumo anterior.
 - Comprobar que la dispensación se inserta correctamente cuando el socio tiene "Plan Ultimate" activo y han pasado al menos 45 minutos desde su última bebida.
 
 ##### R.N.04. Descuento automático en tienda por fidelidad y actualización de stock
 
-El sistema verificará que exista stock suficiente antes de registrar una venta en tienda, aplicará de forma automática y obligatoria un 15% de descuento sobre el precio de venta al público si el comprador tiene una suscripción "Plan Ultimate" activa y al corriente de pago en el momento de la compra[cite: 1], y descontará del inventario las unidades vendidas mediante un *trigger*.
+El sistema verificará que exista stock suficiente antes de registrar una venta en tienda, aplicará de forma automática y obligatoria un 15% de descuento sobre el precio de venta al público si el comprador tiene una suscripción "Plan Ultimate" activa y al corriente de pago en el momento de la compra, y descontará del inventario las unidades vendidas mediante un *trigger*.
 
-**Prueba de aceptación**[cite: 1]
+**Prueba de aceptación**
 - Comprobar que el *trigger* impide registrar la venta si la cantidad solicitada supera el stock actual del producto.
-- Comprobar que al insertar una venta asociada a un socio con "Plan Ultimate" activo se calcula automáticamente el importe aplicando el 15% de descuento y se reduce el stock del producto en la cantidad vendida[cite: 1].
-- Comprobar que al insertar una venta para un socio con "Plan Básico" se cobra el precio estándar sin descuento y se descuenta igualmente el stock[cite: 1].
+- Comprobar que al insertar una venta asociada a un socio con "Plan Ultimate" activo se calcula automáticamente el importe aplicando el 15% de descuento y se reduce el stock del producto en la cantidad vendida.
+- Comprobar que al insertar una venta para un socio con "Plan Básico" se cobra el precio estándar sin descuento y se descuenta igualmente el stock.
 
 ##### R.N.05. Saldo positivo y no solapamiento en reservas con Entrenador Personal
 
-El sistema denegará mediante un *trigger* cualquier intento de reserva de una sesión con un Entrenador Personal si el socio no dispone de al menos una (1) sesión extra pagada y no consumida en su saldo[cite: 1], o si el entrenador personal ya tiene otra sesión reservada en esa misma fecha y franja horaria[cite: 1]. Al confirmarse la inserción de la reserva, el *trigger* descontará automáticamente 1 sesión del saldo del socio[cite: 1].
+El sistema denegará mediante un *trigger* cualquier intento de reserva de una sesión con un Entrenador Personal si el socio no dispone de al menos una (1) sesión extra pagada y no consumida en su saldo, o si el entrenador personal ya tiene otra sesión reservada en esa misma fecha y franja horaria. Al confirmarse la inserción de la reserva, el *trigger* descontará automáticamente 1 sesión del saldo del socio.
 
-**Prueba de aceptación**[cite: 1]
-- Comprobar que el *trigger* rechaza la inserción de la cita si el saldo de sesiones de entrenamiento personal del socio es igual a 0[cite: 1].
-- Comprobar que el *trigger* rechaza la reserva si el entrenador personal ya tiene asignada otra sesión que se solapa en fecha y hora[cite: 1].
-- Comprobar que, existiendo saldo positivo y disponibilidad horaria, la sesión se registra y el saldo de sesiones del socio disminuye automáticamente en 1 unidad[cite: 1].
+**Prueba de aceptación**
+- Comprobar que el *trigger* rechaza la inserción de la cita si el saldo de sesiones de entrenamiento personal del socio es igual a 0.
+- Comprobar que el *trigger* rechaza la reserva si el entrenador personal ya tiene asignada otra sesión que se solapa en fecha y hora.
+- Comprobar que, existiendo saldo positivo y disponibilidad horaria, la sesión se registra y el saldo de sesiones del socio disminuye automáticamente en 1 unidad.
 
 
-### 4.2. Mapa de historias de usuario (opcional)[cite: 1]
+### 4.2. Mapa de historias de usuario (opcional)
 
-A continuación, se detalla el flujo cronológico y lógico de interacción con el sistema:[cite: 1]
+A continuación, se detalla el flujo cronológico y lógico de interacción con el sistema:
 
 | FASE 1: Administración y Socios | FASE 2: Clases Dirigidas y Salas | FASE 3: Entrenamiento Personal | FASE 4: Consumo Premium y Tienda |
 |:---|:---|:---|:---|
@@ -249,41 +249,41 @@ A continuación, se detalla el flujo cronológico y lógico de interacción con 
 | | | | *Validación R.N.03 (Restricción y frecuencia de bebidas)* |
 | | | | *Validación R.N.04 (Descuento Ultimate y control de stock)* |
 
-### 4.3. Requisitos no funcionales (opcional)[cite: 1]
+### 4.3. Requisitos no funcionales (opcional)
 
-**R.N.F. 01. Tiempo de respuesta del código QR**[cite: 1]
+**R.N.F. 01. Tiempo de respuesta del código QR**
 
-Como Socio[cite: 1]
-quiero que el sistema valide mi código QR en el torno en menos de 2 segundos[cite: 1]
-para evitar que se formen colas en la entrada de las instalaciones[cite: 1].
+Como Socio
+quiero que el sistema valide mi código QR en el torno en menos de 2 segundos
+para evitar que se formen colas en la entrada de las instalaciones.
 
-**R.N.F. 02. Disponibilidad del sistema de reservas**[cite: 1]
+**R.N.F. 02. Disponibilidad del sistema de reservas**
 
-Como Socio[cite: 1]
-quiero que la plataforma de reservas esté disponible 24/7[cite: 1]
-para poder gestionar mis clases en cualquier momento, incluso cuando el gimnasio está cerrado[cite: 1].
+Como Socio
+quiero que la plataforma de reservas esté disponible 24/7
+para poder gestionar mis clases en cualquier momento, incluso cuando el gimnasio está cerrado.
 
-**R.N.F. 03. Adaptabilidad a dispositivos móviles**[cite: 1]
+**R.N.F. 03. Adaptabilidad a dispositivos móviles**
 
-Como Socio o Entrenador Personal[cite: 1]
-quiero que la interfaz web se adapte perfectamente a las pantallas de los teléfonos móviles[cite: 1]
-para poder reservar clases, fichar o consultar el horario sin necesidad de usar un ordenador de escritorio[cite: 1].
+Como Socio o Entrenador Personal
+quiero que la interfaz web se adapte perfectamente a las pantallas de los teléfonos móviles
+para poder reservar clases, fichar o consultar el horario sin necesidad de usar un ordenador de escritorio.
 
--- fin entregable 1 --[cite: 1]
+-- fin entregable 1 --
 
-## 5. Modelo conceptual[cite: 1]
+## 5. Modelo conceptual
 
-### 5.1. Diagramas de clases UML[cite: 1]
+### 5.1. Diagramas de clases UML
 
-- con restricciones[cite: 1].
+- con restricciones.
 
-### 5.2. Escenarios de prueba[cite: 1]
+### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML[cite: 1].
+- con descripción textual y diagrama de objetos UML.
 
-## 6. Matrices de trazabilidad[cite: 1]
+## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos[cite: 1].
+- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
 |       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
 |:------|:-----------|:-----------|:-----------|:-----------|
@@ -293,23 +293,23 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 | RF-2  | X          |            | X          | X          |
 | RN-1  |            | X          |            |            |
 | RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |[cite: 1]
+| ...   |            |            |            |            |
 
--- fin entregable 2 --[cite: 1]
+-- fin entregable 2 --
 
-## 7. Modelo relacional en 3FN[cite: 1]
+## 7. Modelo relacional en 3FN
 
-- Relaciones obtenidas al aplicar la transformación del modelo conceptual[cite: 1].
+- Relaciones obtenidas al aplicar la transformación del modelo conceptual.
 
-### 7.1. Justificación de la estrategia de transformación de jerarquías[cite: 1]
+### 7.1. Justificación de la estrategia de transformación de jerarquías
 
-- si se identificaron jerarquías en el MC[cite: 1].
+- si se identificaron jerarquías en el MC.
 
 
-### 8. Matriz de trazabilidad MC/SQL (opcional):[cite: 1]
+### 8. Matriz de trazabilidad MC/SQL (opcional):
 
-- Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)[cite: 1]
-- Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3[cite: 1]
+- Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)
+- Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3
 
 |       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
 |:-------|:-------|:-------|:-------|:-------|
@@ -324,9 +324,9 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 | CONST-1 |        |        |        |        |
 | CONST-2 | X      | X      |        | X      |
 | CONST-3 |        | X      |        | X      |
-| CONST-4 |        |        | X      |        |[cite: 1]
+| CONST-4 |        |        | X      |        |
 
-Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE)[cite: 1].
--- fin entregable 3 --[cite: 1]
+Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE).
+-- fin entregable 3 --
 
-## Referencias[cite: 1]
+## Referencias
