@@ -235,19 +235,16 @@ El sistema denegará mediante un *trigger* cualquier intento de reserva de una s
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
-A continuación, se detalla el flujo cronológico y lógico de interacción con el sistema:
+A continuación, se detallan los requisitos de información y funcionales asociados a cada una de las fases (requisitos generales) del sistema:
 
-| FASE 1: Administración y Socios | FASE 2: Clases Dirigidas y Salas | FASE 3: Entrenamiento Personal | FASE 4: Consumo Premium y Tienda |
-|:---|:---|:---|:---|
-| **R.G.01.** Gestión de socios, planes y accesos | **R.G.02.** Gestión del catálogo y reservas de clases | **R.G.03.** Gestión de entrenadores y bonos extra | **R.G.04.** Gestión de ventas (TPV) y ventajas Ultimate |
-| **R.I.01.** Información de socios y suscripciones | **R.I.02.** Información de salas, clases y reservas | **R.I.03.** Información de personal deportivo | **R.I.05.** Información de productos y ventas en tienda |
-| **R.F.02.** Total de socios por plan (`COUNT`, `GROUP BY`) | **R.F.03.** Asistencia media por clase (`AVG`, `GROUP BY`) | **R.I.04.** Información de bonos y sesiones individuales | **R.I.06.** Información de bebidas y accesos |
-| | **R.F.08.** Aforo mín/máx por actividad (`MIN`, `MAX`, `GROUP BY`) | **R.F.05.** Total de sesiones por entrenador (`COUNT`, `GROUP BY`) | **R.F.01.** Recaudación por categoría (`SUM`, `GROUP BY`) |
-| | *Validación R.N.01 (Límite semanal Plan Básico)* | **R.F.09.** Facturación de bonos (`SUM`, `COUNT`, `GROUP BY`) | **R.F.04.** Precios mín/máx en tienda (`MIN`, `MAX`, `GROUP BY`) |
-| | *Validación R.N.02 (Control estricto de aforo)* | **R.F.10.** Duración media/mín/máx de sesiones (`AVG`, `MIN`, `MAX`) | **R.F.06.** Gasto total y medio por socio (`SUM`, `AVG`, `GROUP BY`) |
-| | | *Validación R.N.05 (Saldo positivo y no solapamiento)* | **R.F.07.** Consumo de bebidas por socio (`COUNT`, `SUM`, `GROUP BY`) |
-| | | | *Validación R.N.03 (Restricción y frecuencia de bebidas)* |
-| | | | *Validación R.N.04 (Descuento Ultimate y control de stock)* |
+| R.G.01. Gestión de socios, planes y accesos | R.G.02. Gestión del catálogo y reservas de clases | R.G.03. Gestión de entrenadores y bonos extra | R.G.04. Gestión de ventas y ventajas Ultimate |
+| :--- | :--- | :--- | :--- |
+| **R.I.01.** Información de socios y planes | **R.I.02.** Información de salas, clases y reservas | **R.I.03.** Información de personal deportivo | **R.I.05.** Información de productos y ventas |
+| **R.I.06.** Información de accesos en torno | **R.F.03.** Asistencia media por clase | **R.I.04.** Información de bonos y sesiones | **R.I.06.** Información de dispensación de bebidas |
+| **R.F.02.** Total de socios por plan | **R.F.08.** Capacidad mín/máx de salas | **R.F.05.** Total de sesiones por entrenador | **R.F.01.** Recaudación en tienda por categoría |
+| | | **R.F.09.** Facturación y cantidad de bonos | **R.F.04.** Precios mín/máx de productos |
+| | | **R.F.10.** Duración de sesiones por entrenador | **R.F.06.** Gasto total y medio por socio |
+| | | | **R.F.07.** Consumo de bebidas por socio |
 
 ### 4.3. Requisitos no funcionales (opcional)
 
