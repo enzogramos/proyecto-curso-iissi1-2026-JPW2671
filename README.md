@@ -91,61 +91,61 @@ para agilizar la atención en recepción, mantener actualizado el inventario y g
 #### R.F.01. Consulta de recaudación total en tienda por categoría de producto
 
 Como Administrador
-quiero consultar la suma total de ingresos generados (`SUM`) en las ventas de la tienda agrupada por categoría de producto (`GROUP BY`)
+quiero consultar la suma total de ingresos generados en las ventas de la tienda agrupada por categoría de producto
 para analizar qué líneas de suplementación y accesorios aportan mayor facturación al gimnasio.
 
 #### R.F.02. Consulta del número total de socios por plan de suscripción
 
 Como Administrador
-quiero conocer el número total de socios registrados (`COUNT`) agrupados por su modalidad de plan de suscripción, Básico o Ultimate (`GROUP BY`)
+quiero conocer el número total de socios registrados agrupados por su modalidad de plan de suscripción, Básico o Ultimate
 para evaluar la distribución de la cartera de clientes entre los distintos planes ofertados.
 
 #### R.F.03. Consulta de asistencia media por actividad en clases dirigidas
 
 Como Administrador
-quiero consultar el promedio de socios asistentes (`AVG`) agrupado por cada tipo de actividad o clase dirigida (`GROUP BY`)
+quiero consultar el promedio de socios asistentes agrupado por cada tipo de actividad o clase dirigida
 para identificar qué disciplinas tienen mayor demanda media y optimizar la planificación de horarios.
 
 #### R.F.04. Consulta de precios mínimo y máximo de productos por categoría
 
 Como Socio
-quiero consultar el precio más bajo (`MIN`) y el precio más alto (`MAX`) de los artículos disponibles en la tienda agrupados por categoría (`GROUP BY`)
+quiero consultar el precio más bajo y el precio más alto de los artículos disponibles en la tienda agrupados por categoría
 para conocer el rango de precios de los suplementos y accesorios antes de acudir a recepción.
 
 #### R.F.05. Consulta del total de sesiones impartidas por cada entrenador personal
 
 Como Administrador
-quiero consultar la cantidad total de sesiones individuales realizadas (`COUNT`) agrupadas por cada entrenador personal (`GROUP BY`)
+quiero consultar la cantidad total de sesiones individuales realizadas agrupadas por cada entrenador personal
 para supervisar la carga de trabajo y la productividad del equipo de entrenadores.
 
 #### R.F.06. Consulta del gasto total y gasto medio en tienda por socio
 
 Como Administrador
-quiero obtener el importe total acumulado (`SUM`) y el gasto medio por compra (`AVG`) agrupado por cada socio (`GROUP BY`)
+quiero obtener el importe total acumulado y el gasto medio por compra agrupado por cada socio
 para identificar a los clientes con mayor volumen de compras en la tienda y evaluar el impacto de los descuentos aplicados.
 
 #### R.F.07. Consulta de consumo total de bebidas isotónicas por socio
 
 Como Administrador
-quiero consultar el número total de dispensaciones realizadas (`COUNT`) y el volumen total en mililitros consumido (`SUM`) en la máquina de bebidas agrupado por cada socio con Plan Ultimate (`GROUP BY`)
+quiero consultar el número total de dispensaciones realizadas y el volumen total en mililitros consumido en la máquina de bebidas agrupado por cada socio con Plan Ultimate
 para monitorizar el uso del dispensador automático y planificar la reposición de bebidas.
 
 #### R.F.08. Consulta de capacidad mínima y máxima de las salas por tipo de actividad
 
 Como Monitor
-quiero consultar el aforo mínimo (`MIN`) y el aforo máximo (`MAX`) de las salas asignadas agrupadas por cada modalidad de clase dirigida (`GROUP BY`)
+quiero consultar el aforo mínimo y el aforo máximo de las salas asignadas agrupadas por cada modalidad de clase dirigida
 para conocer los límites de capacidad de los espacios donde se imparte cada disciplina deportiva.
 
 #### R.F.09. Consulta de facturación y cantidad de bonos vendidos por modalidad
 
 Como Administrador
-quiero consultar el número total de bonos adquiridos (`COUNT`) y el importe total recaudado (`SUM`) agrupado por cada tipo de bono de entrenamiento personal (`GROUP BY`)
+quiero consultar el número total de bonos adquiridos y el importe total recaudado agrupado por cada tipo de bono de entrenamiento personal
 para llevar el control contable de los servicios contratados fuera de la cuota mensual.
 
 #### R.F.10. Consulta de duración media, mínima y máxima de sesiones por entrenador
 
 Como Entrenador Personal
-quiero consultar la duración media (`AVG`), mínima (`MIN`) y máxima (`MAX`) en minutos de las sesiones privadas impartidas agrupadas por cada socio entrenado (`GROUP BY`)
+quiero consultar la duración media , mínima y máxima en minutos de las sesiones privadas impartidas agrupadas por cada socio entrenado
 para analizar la dedicación temporal y realizar un seguimiento de los entrenamientos personalizados.
 
 #### 4.1.1. Requisitos de información
