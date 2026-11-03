@@ -280,17 +280,19 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
-
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+| Requisito | Ent: Socio | Ent: Subscripción | Ent: Sala | Ent: Clase Dirigida | Ent: Reserva Grupal | Ent: Empleado | Ent: Monitor | Ent: Entrenador Personal | Ent: Bono | Ent: Sesión Entreno | Ent: Producto | Ent: Venta | Ent: Dispensación Bebida | Ent: Acceso | Aso: tiene | Aso: realiza (Reserva) | Aso: lleva a cabo | Aso: se imparte | Aso: imparte (Clase) | Aso: compra | Aso: contrata | Aso: imparte (Sesión) | Aso: consume | Aso: contiene | Aso: usa | Aso: realiza (Acceso) | Res: Límite Reservas | Res: Aforo Máximo | Res: Bebidas 45m | Res: Stock y Dto | Res: Saldo y Horario |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **R.I.01** | X | X | | | | | | | | | | | | | X | | | | | | | | | | | | | | | | |
+| **R.I.02** | | | X | X | X | | | | | | | | | | | X | X | X | | | | | | | | | | | | | |
+| **R.I.03** | | | | | | X | X | X | | | | | | | | | | | X | | | | | | | | | | | | |
+| **R.I.04** | | | | | | | | | X | X | | | | | | | | | | X | X | X | | | | | | | | | |
+| **R.I.05** | | | | | | | | | | | X | X | | | | | | | | | | | X | X | | | | | | | |
+| **R.I.06** | | | | | | | | | | | | | X | X | | | | | | | | | | | X | X | | | | | |
+| **R.N.01** | X | | | | X | | | | | | | | | | | X | | | | | | | | | | | X | | | | |
+| **R.N.02** | | | X | X | X | | | | | | | | | | | | X | X | | | | | | | | | | X | | | |
+| **R.N.03** | X | | | | | | | | | | | | X | | | | | | | | | | | | X | | | | X | | |
+| **R.N.04** | X | | | | | | | | | | X | X | | | | | | | | | | | X | X | | | | | | X | |
+| **R.N.05** | X | | | | | | | X | | X | | | | | | | | | | | X | X | | | | | | | | | X |
 
 -- fin entregable 2 --
 
