@@ -285,6 +285,8 @@ https://drive.google.com/file/d/1xqYe42Rq_TU5eI3tI13Bi_d36Bu6KfC_/view?usp=shari
 *   **Acción:** El socio selecciona una sesión disponible y solicita realizar una reserva.
 *   **Resultado esperado:** El sistema registra correctamente la reserva, asigna una plaza al socio y confirma que la operación se ha realizado correctamente.
 
+<img width="674" height="837" alt="imagen" src="https://github.com/user-attachments/assets/f5789dd4-6a0a-414c-b086-a1f427520c61" />
+
 #### Escenario 2: Compra de un producto
 *   **Objetivo:** Comprobar que un cliente puede comprar uno o varios productos de la tienda de suplementos.
 *   **Precondiciones:** Los productos solicitados deben estar disponibles en el inventario y tener stock suficiente. No es necesario que el cliente tenga una suscripción activa.
@@ -292,6 +294,7 @@ https://drive.google.com/file/d/1xqYe42Rq_TU5eI3tI13Bi_d36Bu6KfC_/view?usp=shari
 *   **Acción:** El cliente accede al catálogo de productos, selecciona los artículos que desea comprar y confirma la operación.
 *   **Resultado esperado:** El sistema registra correctamente la compra, actualiza el stock restando las unidades adquiridas y confirma la operación al cliente.
 
+<img width="546" height="694" alt="imagen" src="https://github.com/user-attachments/assets/31dadaee-8722-4dbd-9a84-d3cbda9f29e6" />
 
 ## 6. Matrices de trazabilidad
 
