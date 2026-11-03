@@ -272,7 +272,7 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 
 ### 5.1. Diagramas de clases UML
 
-
+https://drive.google.com/file/d/1xqYe42Rq_TU5eI3tI13Bi_d36Bu6KfC_/view?usp=sharing
 
 
 
