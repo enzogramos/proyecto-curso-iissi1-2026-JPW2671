@@ -271,8 +271,38 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
+####Escenario 1: Reserva de una sesión
+**Objetivo:** Comprobar que un socio puede reservar una sesión del gimnasio.
+**Precondiciones:** El socio está registrado, tiene una suscripción activa y la sesión dispone de plazas libres.
+**Actor:** Socio.
+**Acción:**  El socio selecciona una sesión disponible y solicita realizar una reserva.
+**Resultado esperado:** El sistema registra correctamente la reserva, asigna una plaza al socio y confirma que la operación se ha realizado correctamente.
 
-- con restricciones.
+####Escenario 2: Compra de un producto
+**Objetivo:** Comprobar que un cliente puede comprar uno o varios productos de la tienda de suplementos.
+**Precondiciones:** Los productos solicitados deben estar disponibles en el inventario y tener stock suficiente. No es necesario que el cliente tenga una suscripción activa.
+**Actor:** Cliente.
+**Acción:** El cliente accede al catálogo de productos, selecciona los artículos que desea comprar y confirma la operación.
+**Resultado esperado:** El sistema registra correctamente la compra, actualiza el stock restando las unidades adquiridas y confirma la operación al cliente.
+
+####Escenario 3: Reserva de una sesión personal
+**Objetivo:** Comprobar que un socio no puede reservar una sesión de entrenamiento personal cuando la franja horaria seleccionada ya está ocupada.
+**Precondiciones:** El socio está registrado y dispone de una suscripción activa, ya sea estándar o premium. La franja horaria solicitada se encuentra dentro de la jornada laboral, pero ya está reservada por otro usuario.
+**Actor:** Socio.
+**Acción:** El socio intenta reservar una sesión personal para un día y una hora determinados.
+**Resultado esperado:** El sistema rechaza la reserva porque la franja horaria ya está ocupada e informa al socio de que debe seleccionar otro horario disponible.
+
+####Escenario 4: Alta de una suscripción o cambio de plan
+**Objetivo:** Comprobar que un usuario puede darse de alta en el gimnasio seleccionando un plan de suscripción o modificar el plan que ya tiene contratado.
+**Precondiciones:** Para el alta inicial, el usuario debe disponer de una cuenta con sus datos personales y credenciales de acceso. Para realizar un cambio de plan, debe tener una suscripción activa.
+**Actor:** Usuario.
+**Acción:**
+**Alta inicial:** El usuario selecciona uno de los planes disponibles y confirma la contratación.
+**Cambio de plan:** El socio selecciona un plan diferente al que tiene contratado y solicita el cambio.
+**Resultado esperado:**
+**Alta inicial:** El sistema registra al socio y le asigna el plan seleccionado.
+**Cambio de plan:** El sistema actualiza el plan del socio y aplica el importe correspondiente a la diferencia de precio, si procede.
+
 
 ### 5.2. Escenarios de prueba
 
