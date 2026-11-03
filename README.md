@@ -271,6 +271,13 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
+
+
+
+
+
+### 5.2. Escenarios de prueba
+
 #### Escenario 1: Reserva de una sesión
 *   **Objetivo:** Comprobar que un socio puede reservar una sesión del gimnasio.
 *   **Precondiciones:** El socio está registrado, tiene una suscripción activa y la sesión dispone de plazas libres.
@@ -293,8 +300,6 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 *   **Acción:** El socio intenta reservar una sesión personal para un día y una hora determinados.
 *   **Resultado esperado:** El sistema rechaza la reserva porque la franja horaria ya está ocupada e informa al socio de que debe seleccionar otro horario disponible.
 
-
-
 #### Escenario 4: Alta de una suscripción o cambio de plan
 *   **Objetivo:** Comprobar que un usuario puede darse de alta en el gimnasio seleccionando un plan de suscripción o modificar el plan que ya tiene contratado.
 *   **Precondiciones:** Para el alta inicial, el usuario debe disponer de una cuenta con sus datos personales y credenciales de acceso. Para realizar un cambio de plan, debe tener una suscripción activa.
@@ -305,13 +310,6 @@ para poder reservar clases, fichar o consultar el horario sin necesidad de usar 
 *   **Resultado esperado:**
     *   **Alta inicial:** El sistema registra al socio y le asigna el plan seleccionado.
     *   **Cambio de plan:** El sistema actualiza el plan del socio y aplica el importe correspondiente a la diferencia de precio, si procede.
-
-
-
-
-### 5.2. Escenarios de prueba
-
-- con descripción textual y diagrama de objetos UML.
 
 ## 6. Matrices de trazabilidad
 
