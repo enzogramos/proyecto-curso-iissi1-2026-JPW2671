@@ -279,20 +279,15 @@ https://drive.google.com/file/d/1xqYe42Rq_TU5eI3tI13Bi_d36Bu6KfC_/view?usp=shari
 ### 5.2. Escenarios de prueba
 
 #### Escenario 1: Reserva de una sesión
-*   **Objetivo:** Comprobar que un socio puede reservar una sesión del gimnasio.
-*   **Precondiciones:** El socio está registrado, tiene una suscripción activa y la sesión dispone de plazas libres.
-*   **Actor:** Socio.
-*   **Acción:** El socio selecciona una sesión disponible y solicita realizar una reserva.
-*   **Resultado esperado:** El sistema registra correctamente la reserva, asigna una plaza al socio y confirma que la operación se ha realizado correctamente.
+
+En el primer escenario, el socio1 llamado Aurelio Fernández Páyez cuya suscripción es la suscripción básica y activa compra un bono llamado bono1 de 5 clases para realizar una reserva grupal para la fecha 10 / 11 / 2026 y confirma su asistencia. Esa reserva lleva a cabo una clase dirigida de "ZUMBA" a las 11:00 de la mañana y durará 90 minutos.
+La clase se impartirá en la sala 3B con id = 1 que tiene un aforo máximo de 20 personas. Un empleado (empleado1) llamado Roberto Torres Odero impartirá la clase como monitor de la clase dirigida.
 
 <img width="674" height="837" alt="imagen" src="https://github.com/user-attachments/assets/f5789dd4-6a0a-414c-b086-a1f427520c61" />
 
 #### Escenario 2: Compra de un producto
-*   **Objetivo:** Comprobar que un cliente puede comprar uno o varios productos de la tienda de suplementos.
-*   **Precondiciones:** Los productos solicitados deben estar disponibles en el inventario y tener stock suficiente. No es necesario que el cliente tenga una suscripción activa.
-*   **Actor:** Cliente.
-*   **Acción:** El cliente accede al catálogo de productos, selecciona los artículos que desea comprar y confirma la operación.
-*   **Resultado esperado:** El sistema registra correctamente la compra, actualiza el stock restando las unidades adquiridas y confirma la operación al cliente.
+
+En el escenario 2, el socio2 llamado "Esteban García de Castro Cantero" cuya suscripción es la BÁSICA y está activa realiza un acceso al gimnasio por medio del código QR periódico que proporciona el gimnasio para ello. Permite el acceso ya que no hay ninguna anomalía en el estado de la suscripción o del pago para el día 3 / 11 / 2026. El socio quiere adquirir un producto para el cual consume una venta, por la cantidad de 2 y con un importe total de 20€. No se le aplica ningún descuento porque su plan de suscripción no le aporta ninguno. La venta contiene un producto con id = 1, concretamente es creatina de 500g de la categoría de suplementos y tiene un precio unitario de 10€. La compra se puede autorizar porque hay suficiente stock en la tienda / almacén.
 
 <img width="546" height="694" alt="imagen" src="https://github.com/user-attachments/assets/31dadaee-8722-4dbd-9a84-d3cbda9f29e6" />
 
