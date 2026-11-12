@@ -341,7 +341,17 @@ Relaciones obtenidas al aplicar la transformación del modelo conceptual:
 
 ### 7.1. Justificación de la estrategia de transformación de jerarquías
 
-- si se identificaron jerarquías en el MC.
+En el modelo conceptual se identificó una jerarquía donde la clase **Empleado** actúa como superclase, teniendo como subclases a **Monitor** y **Entrenador Personal**.
+Esta jerarquía se clasifica lógicamente como:
+*   **Disjunta:** Un empleado ejerce un solo rol principal a efectos de impartición de clases o sesiones, no mezclando las competencias de Monitor y Entrenador Personal simultáneamente en el sistema.
+*   **Total:** Todo empleado deportivo registrado en este subsistema debe pertenecer obligatoriamente a una de estas dos categorías operativas.
+
+**Estrategia adoptada:**
+Para su transformación al modelo relacional se ha optado por la estrategia de tres tablas (mantener la superclase y las subclases vinculadas mediante Clave Ajena). Se crea la tabla padre **Empleado** con los atributos comunes (**dni**, **nombre_completo**, **email**, **telefono**, **especialidad**), y dos tablas hijas **Monitor** y **EntrenadorPersonal** cuya única columna es su Clave Primaria (**dni**), que actúa simultáneamente como Clave Ajena referenciando a **Empleado**.
+
+**Justificación de la elección:**
+Aunque esta opción requiere realizar operaciones **JOIN** en las consultas para obtener los datos personales de un monitor o entrenador, se ha elegido frente a la opción de una única tabla global porque **garantiza la integridad referencial de forma nativa en SQL**. En el modelo conceptual, las asociaciones **imparte** salen específicamente de las clases hijas (**Monitor** hacia **ClaseDirigida** y **EntrenadorPersonal** hacia **SesionEntreno**). Al separar las subclases en tablas propias, las Claves Ajenas **dni_monitor** y **dni_entrenador** apuntan estrictamente a la tabla que les corresponde, evitando que se pueda asignar un Monitor a un entrenamiento personal (o viceversa) sin necesidad de programar *triggers* adicionales de validación de rol.
+
 
 
 ### 8. Matriz de trazabilidad MC/SQL (opcional):
