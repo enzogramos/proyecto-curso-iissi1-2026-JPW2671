@@ -322,7 +322,22 @@ En el escenario 2, el socio2 llamado "Esteban García de Castro Cantero" cuya su
 
 ## 7. Modelo relacional en 3FN
 
-- Relaciones obtenidas al aplicar la transformación del modelo conceptual.
+Relaciones obtenidas al aplicar la transformación del modelo conceptual:
+
+*   **Socio** (dni [PK], nombre [NOT NULL], apellidos [NOT NULL], fecha_nacimiento, email [AK, NOT NULL], telefono, estado [NOT NULL], saldo_sesiones [NOT NULL])
+*   **Subscripcion** (id [PK], tipo_plan [NOT NULL], fecha_alta [NOT NULL], fecha_prox_renov, estado_pago [NOT NULL], dni_socio [FK -> Socio, AK, NOT NULL])
+*   **Sala** (id [PK], nombre [NOT NULL], aforo_maximo [NOT NULL])
+*   **Empleado** (dni [PK], nombre_completo [NOT NULL], email [AK, NOT NULL], telefono, especialidad [NOT NULL])
+*   **Monitor** (dni [PK, FK -> Empleado])
+*   **EntrenadorPersonal** (dni [PK, FK -> Empleado])
+*   **ClaseDirigida** (id [PK], actividad [NOT NULL], fecha [NOT NULL], hora_inicio [NOT NULL], duracion_mins [NOT NULL], id_sala [FK -> Sala, NOT NULL], dni_monitor [FK -> Monitor, NOT NULL])
+*   **ReservaGrupal** (id [PK], fecha_reserva [NOT NULL], confirmacion_asistencia [NOT NULL], dni_socio [FK -> Socio, NOT NULL], id_clase [FK -> ClaseDirigida, NOT NULL])
+*   **Bono** (id [PK], tipo [NOT NULL], n_sesiones_incluidas [NOT NULL], precio [NOT NULL], fecha_adquisicion [NOT NULL], dni_socio [FK -> Socio, NOT NULL])
+*   **SesionEntreno** (id [PK], fecha [NOT NULL], hora_inicio [NOT NULL], duracion [NOT NULL], estado_cita [NOT NULL], dni_socio [FK -> Socio, NOT NULL], dni_entrenador [FK -> EntrenadorPersonal, NOT NULL])
+*   **Producto** (id [PK], nombre [NOT NULL], categoria [NOT NULL], precio_unitario [NOT NULL], stock [NOT NULL])
+*   **Venta** (id [PK], fecha_hora [NOT NULL], cantidad [NOT NULL], porcentaje_descuento, importe_total [NOT NULL], dni_socio [FK -> Socio], id_producto [FK -> Producto, NOT NULL])
+*   **DispensacionBebida** (id [PK], tipo [NOT NULL], volumen [NOT NULL], fecha_hora [NOT NULL], dni_socio [FK -> Socio, NOT NULL])
+*   **Acceso** (id [PK], codigo_qr [NOT NULL], fecha_hora [NOT NULL], acceso_permitido [NOT NULL], dni_socio [FK -> Socio, NOT NULL])
 
 ### 7.1. Justificación de la estrategia de transformación de jerarquías
 
