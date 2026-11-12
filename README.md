@@ -354,7 +354,7 @@ Aunque esta opción requiere realizar operaciones **JOIN** en las consultas para
 
 
 
-### 8. Matriz de trazabilidad MC/SQL (opcional):
+## 8. Matriz de trazabilidad MC/SQL (opcional):
 
 - Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)
 - Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3
@@ -375,6 +375,9 @@ Aunque esta opción requiere realizar operaciones **JOIN** en las consultas para
 | CONST-4 |        |        | X      |        |
 
 Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE).
+
+## 9. Scripts
+
 -- fin entregable 3 --
 
 ## Referencias
