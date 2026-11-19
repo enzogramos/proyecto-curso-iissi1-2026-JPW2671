@@ -288,9 +288,10 @@ La clase se impartirá en la sala 3B con id = 1 que tiene un aforo máximo de 20
 
 #### Escenario 2: Compra de un producto
 
-En el escenario 2, el socio2 llamado "Esteban García de Castro Cantero" cuya suscripción es la BÁSICA y está activa realiza un acceso al gimnasio por medio del código QR periódico que proporciona el gimnasio para ello. Permite el acceso ya que no hay ninguna anomalía en el estado de la suscripción o del pago para el día 3 / 11 / 2026. El socio quiere adquirir un producto para el cual consume una venta, por la cantidad de 2 y con un importe total de 20€. No se le aplica ningún descuento porque su plan de suscripción no le aporta ninguno. La venta contiene un producto con id = 1, concretamente es creatina de 500g de la categoría de suplementos y tiene un precio unitario de 10€. La compra se puede autorizar porque hay suficiente stock en la tienda / almacén.
+En el escenario 2, el socio2 llamado "Esteban García de Castro Cantero" cuya suscripción es la ULTIMATE y está activa realiza un acceso al gimnasio por medio del código QR periódico que proporciona el gimnasio para ello. Permite el acceso ya que no hay ninguna anomalía en el estado de la suscripción o del pago para el día 3 / 11 / 2026. El socio quiere adquirir un producto para el cual consume una venta, por la cantidad de 2 y con un importe total de 17€. Se le aplica un descuento del 15% por su plan de suscripción ULTIMATE. La venta contiene un producto con id = 1, concretamente es creatina de 500g de la categoría de suplementos y tiene un precio unitario de 10€. La compra se puede autorizar porque hay suficiente stock en la tienda / almacén.
 
-<img width="1171" height="807" alt="imagen" src="https://github.com/user-attachments/assets/f310dee3-4247-4c87-9ad8-e5803ae800a5" />
+<img width="1043" height="727" alt="imagen" src="https://github.com/user-attachments/assets/387a45f9-5b87-43f3-8052-e48d5bc393bb" />
+
 
 
 ## 6. Matrices de trazabilidad
@@ -399,9 +400,6 @@ Para su transformación al modelo relacional se ha optado por la estrategia de t
 **Justificación de la elección:**
 Aunque esta opción requiere realizar operaciones **JOIN** en las consultas para obtener los datos personales de un monitor o entrenador, se ha elegido frente a la opción de una única tabla global porque **garantiza la integridad referencial de forma nativa en SQL**. En el modelo conceptual, las asociaciones **imparte** salen específicamente de las clases hijas (**Monitor** hacia **ClaseDirigida** y **EntrenadorPersonal** hacia **SesionEntreno**). Al separar las subclases en tablas propias, las Claves Ajenas **dni_monitor** y **dni_entrenador** apuntan estrictamente a la tabla que les corresponde, evitando que se pueda asignar un Monitor a un entrenamiento personal (o viceversa) sin necesidad de programar *triggers* adicionales de validación de rol.
 
-
-
-## 8. Matriz de trazabilidad MC/SQL (opcional):
 
 ## 8. Matriz de trazabilidad MC/SQL (opcional)
 
