@@ -283,15 +283,16 @@ https://drive.google.com/file/d/1xqYe42Rq_TU5eI3tI13Bi_d36Bu6KfC_/view?usp=shari
 En el primer escenario, el socio1 llamado Aurelio Fernández Páyez cuya suscripción es la suscripción básica y activa compra un bono llamado bono1 de 5 clases para realizar una reserva grupal para la fecha 10 / 11 / 2026 y confirma su asistencia. Esa reserva lleva a cabo una clase dirigida de "ZUMBA" a las 11:00 de la mañana y durará 90 minutos.
 La clase se impartirá en la sala 3B con id = 1 que tiene un aforo máximo de 20 personas. Un empleado (empleado1) llamado Roberto Torres Odero impartirá la clase como monitor de la clase dirigida.
 
-<img width="674" height="837" alt="imagen" src="https://github.com/user-attachments/assets/f5789dd4-6a0a-414c-b086-a1f427520c61" />
+<img width="623" height="888" alt="imagen" src="https://github.com/user-attachments/assets/3227a193-b83e-49a2-bce1-a973119e8fb3" />
+
 
 #### Escenario 2: Compra de un producto
 
 En el escenario 2, el socio2 llamado "Esteban García de Castro Cantero" cuya suscripción es la BÁSICA y está activa realiza un acceso al gimnasio por medio del código QR periódico que proporciona el gimnasio para ello. Permite el acceso ya que no hay ninguna anomalía en el estado de la suscripción o del pago para el día 3 / 11 / 2026. El socio quiere adquirir un producto para el cual consume una venta, por la cantidad de 2 y con un importe total de 20€. No se le aplica ningún descuento porque su plan de suscripción no le aporta ninguno. La venta contiene un producto con id = 1, concretamente es creatina de 500g de la categoría de suplementos y tiene un precio unitario de 10€. La compra se puede autorizar porque hay suficiente stock en la tienda / almacén.
 
-<img width="546" height="694" alt="imagen" src="https://github.com/user-attachments/assets/31dadaee-8722-4dbd-9a84-d3cbda9f29e6" />
+<img width="1171" height="807" alt="imagen" src="https://github.com/user-attachments/assets/f310dee3-4247-4c87-9ad8-e5803ae800a5" />
 
-## 6. Matrices de trazabilidad
+
 ## 6. Matrices de trazabilidad
 
 | Requisito | Ent: Socio | Ent: Subscripción | Ent: Sala | Ent: Clase Dirigida | Ent: Reserva Grupal | Ent: Empleado | Ent: Monitor | Ent: Entrenador Personal | Ent: Bono | Ent: Sesión Entreno | Ent: Producto | Ent: Venta | Ent: Dispensación Bebida | Ent: Acceso | Aso: tiene | Aso: realiza (Reserva) | Aso: lleva a cabo | Aso: se imparte | Aso: imparte (Clase) | Aso: compra | Aso: contrata | Aso: imparte (Sesión) | Aso: consume | Aso: contiene | Aso: usa | Aso: realiza (Acceso) | Res: Límite Reservas | Res: Aforo Máximo | Res: Bebidas 45m | Res: Stock y Dto | Res: Saldo y Horario |
