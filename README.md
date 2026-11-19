@@ -403,25 +403,134 @@ Aunque esta opción requiere realizar operaciones **JOIN** en las consultas para
 
 ## 8. Matriz de trazabilidad MC/SQL (opcional):
 
-- Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)
-- Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3
+## 8. Matriz de trazabilidad MC/SQL (opcional)
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:-------|:-------|:-------|:-------|:-------|
-| TABLA-1 |        |        |        |        |
-| TABLA-2 |        |        |        |        |
-| TABLA-3 |        |        |        |        |
-| TABLA-4 |        |        |        |        |
-| TRIG-1 |        |        |        |        |
-| TRIG-2 | X      | X      |        | X      |
-| TRIG-3 |        | X      |        | X      |
-| TRIG-4 |        |        | X      |        |
-| CONST-1 |        |        |        |        |
-| CONST-2 | X      | X      |        | X      |
-| CONST-3 |        | X      |        | X      |
-| CONST-4 |        |        | X      |        |
+Matriz de trazabilidad entre los elementos del Modelo Conceptual (Entidades, Asociaciones y Restricciones) y los elementos del Modelo Tecnológico en SQL (Tablas, Triggers, Funciones, Procedimientos y Constraints declarativas definidas en el `CREATE TABLE`):
 
-Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE).
+| Elemento SQL | Ent: Socio | Ent: Subscripción | Ent: Sala | Ent: Clase Dirigida | Ent: Reserva Grupal | Ent: Empleado | Ent: Monitor | Ent: Entrenador Personal | Ent: Bono | Ent: Sesión Entreno | Ent: Producto | Ent: Venta | Ent: Dispensación Bebida | Ent: Acceso | Aso: tiene | Aso: realiza (Reserva) | Aso: lleva a cabo | Aso: se imparte | Aso: imparte (Clase) | Aso: compra | Aso: contrata | Aso: imparte (Sesión) | Aso: consume | Aso: contiene | Aso: usa | Aso: realiza (Acceso) | Res: Límite Reservas | Res: Aforo Máximo | Res: Bebidas 45m | Res: Stock y Dto | Res: Saldo y Horario |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **TABLA-01** | X | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **TABLA-02** | | X | | | | | | | | | | | | | X | | | | | | | | | | | | | | | | |
+| **TABLA-03** | | | X | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **TABLA-04** | | | | | | X | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **TABLA-05** | | | | | | | X | | | | | | | | | | | | | | | | | | | | | | | | |
+| **TABLA-06** | | | | | | | | X | | | | | | | | | | | | | | | | | | | | | | | |
+| **TABLA-07** | | | | X | | | | | | | | | | | | | | X | X | | | | | | | | | | | | |
+| **TABLA-08** | | | | | X | | | | | | | | | | | X | X | | | | | | | | | | | | | | |
+| **TABLA-09** | | | | | | | | | X | | | | | | | | | | | X | | | | | | | | | | | |
+| **TABLA-10** | | | | | | | | | | X | | | | | | | | | | | X | X | | | | | | | | | |
+| **TABLA-11** | | | | | | | | | | | X | | | | | | | | | | | | | | | | | | | | |
+| **TABLA-12** | | | | | | | | | | | | X | | | | | | | | | | | X | X | | | | | | | |
+| **TABLA-13** | | | | | | | | | | | | | X | | | | | | | | | | | | X | | | | | | |
+| **TABLA-14** | | | | | | | | | | | | | | X | | | | | | | | | | | | X | | | | | |
+| **TRIG-01** | X | X | | X | X | | | | | | | | | | X | X | X | | | | | | | | | | X | | | | |
+| **TRIG-02** | | | X | X | X | | | | | | | | | | | | X | X | | | | | | | | | | X | | | |
+| **TRIG-03** | X | X | | | | | | | | | | | X | | X | | | | | | | | | | X | | | | X | | |
+| **TRIG-04** | X | X | | | | | | | | | X | X | | | X | | | | | | | | X | X | | | | | | X | |
+| **TRIG-05** | X | | | | | | | X | | X | | | | | | | | | | | X | X | | | | | | | | | X |
+| **FUNC-01** | X | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | X |
+| **FUNC-02** | X | X | | | | | | | | | X | X | | | X | | | | | | | | X | X | | | | | | X | |
+| **FUNC-03** | | | X | X | X | | | | | | | | | | | | X | X | | | | | | | | | | X | | | |
+| **FUNC-04** | X | | | X | X | | | | | | | | | | | X | X | | | | | | | | | | X | | | | |
+| **FUNC-05** | X | X | | | | | | | | | | | X | | X | | | | | | | | | | X | | | | X | | |
+| **PROC-01** | X | X | | | | | | | | | | | | | X | | | | | | | | | | | | | | | | |
+| **PROC-02** | X | | | | | | | | X | | | | | | | | | | | X | | | | | | | | | | | X |
+| **PROC-03** | X | X | | | | | | | | | | | | X | X | | | | | | | | | | | X | | | | | |
+| **PROC-04** | X | | | | | | | | | X | | | | | | | | | | | X | | | | | | | | | | X |
+| **PROC-05** | X | X | | | | | | | | | | | | | X | | | | | | | | | | | | | | | | |
+| **CONST-01** | X | X | X | X | X | X | X | X | X | X | X | X | X | X | | | | | | | | | | | | | | | | | |
+| **CONST-02** | X | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **CONST-03** | | X | | | | | | | | | | | | | X | | | | | | | | | | | | | | | | |
+| **CONST-04** | | | | | | X | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **CONST-05** | X | X | | | | | | | | | | | | | X | | | | | | | | | | | | | | | | |
+| **CONST-06** | | | | | | X | X | | | | | | | | | | | | | | | | | | | | | | | | |
+| **CONST-07** | | | | | | X | | X | | | | | | | | | | | | | | | | | | | | | | | |
+| **CONST-08** | | | X | X | | | | | | | | | | | | | | X | | | | | | | | | | | | | |
+| **CONST-09** | | | | X | | | X | | | | | | | | | | | | X | | | | | | | | | | | | |
+| **CONST-10** | X | | | | X | | | | | | | | | | | X | | | | | | | | | | | | | | | |
+| **CONST-11** | | | | X | X | | | | | | | | | | | | X | | | | | | | | | | | | | | |
+| **CONST-12** | X | | | | | | | | X | | | | | | | | | | | X | | | | | | | | | | | |
+| **CONST-13** | X | | | | | | | | | X | | | | | | | | | | | X | | | | | | | | | | |
+| **CONST-14** | | | | | | | | X | | X | | | | | | | | | | | | X | | | | | | | | | |
+| **CONST-15** | X | | | | | | | | | | | X | | | | | | | | | | | X | | | | | | | | |
+| **CONST-16** | | | | | | | | | | | X | X | | | | | | | | | | | | X | | | | | | | |
+| **CONST-17** | X | | | | | | | | | | | | X | | | | | | | | | | | | X | | | | | | |
+| **CONST-18** | X | | | | | | | | | | | | | X | | | | | | | | | | | | X | | | | | |
+| **CONST-19** | X | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | X |
+| **CONST-20** | | | X | | | | | | | | | | | | | | | | | | | | | | | | | X | | | |
+| **CONST-21** | | | | X | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **CONST-22** | | | | | | | | | X | | | | | | | | | | | | | | | | | | | | | | |
+| **CONST-23** | | | | | | | | | | X | | | | | | | | | | | | | | | | | | | | | |
+| **CONST-24** | | | | | | | | | | | X | | | | | | | | | | | | | | | | | | | X | |
+| **CONST-25** | | | | | | | | | | | | X | | | | | | | | | | | | | | | | | | X | |
+| **CONST-26** | | | | | | | | | | | | | X | | | | | | | | | | | | | | | | | | |
+
+### Leyenda de elementos SQL
+
+*   **Tablas (`CREATE TABLE`):**
+    *   **TABLA-01:** `Socios`
+    *   **TABLA-02:** `Subscripciones`
+    *   **TABLA-03:** `Salas`
+    *   **TABLA-04:** `Empleados`
+    *   **TABLA-05:** `Monitores`
+    *   **TABLA-06:** `EntrenadoresPersonales`
+    *   **TABLA-07:** `ClasesDirigidas`
+    *   **TABLA-08:** `ReservasGrupales`
+    *   **TABLA-09:** `Bonos`
+    *   **TABLA-10:** `SesionesEntreno`
+    *   **TABLA-11:** `Productos`
+    *   **TABLA-12:** `Ventas`
+    *   **TABLA-13:** `DispensacionesBebida`
+    *   **TABLA-14:** `Accesos`
+
+*   **Triggers (`CREATE TRIGGER`):**
+    *   **TRIG-01 (`trg_limite_reservas_semanales`):** Verifica que el socio esté activo y limita a 2 reservas semanales activas a los socios con Plan Básico (`R.N.01`).
+    *   **TRIG-02 (`trg_control_aforo_clase`):** Comprueba que el número de inscritos no supere el aforo máximo de la sala antes de insertar una reserva grupal (`R.N.02`).
+    *   **TRIG-03 (`trg_restriccion_bebidas`):** Valida que el socio tenga Plan Ultimate activo/pagado y hayan pasado al menos 45 minutos desde su última dispensación (`R.N.03`).
+    *   **TRIG-04 (`trg_venta_tienda_stock_descuento`):** Comprueba stock suficiente, aplica el 15% de descuento a socios Ultimate, calcula el importe total y descuenta el stock (`R.N.04`).
+    *   **TRIG-05 (`trg_reserva_sesion_personal`):** Valida saldo positivo de sesiones, evita solapamientos horarios del entrenador y descuenta 1 sesión del saldo del socio (`R.N.05`).
+
+*   **Funciones almacenadas (`CREATE FUNCTION`):**
+    *   **FUNC-01 (`fn_saldo_sesiones_socio`):** Devuelve el saldo actual de sesiones de entrenamiento personal de un socio.
+    *   **FUNC-02 (`fn_calcular_precio_final`):** Calcula el importe final de una compra aplicando el 15% de descuento si el socio tiene Plan Ultimate pagado.
+    *   **FUNC-03 (`fn_plazas_disponibles_clase`):** Calcula las plazas libres restantes de una clase dirigida según el aforo de su sala.
+    *   **FUNC-04 (`fn_reservas_semanales_socio`):** Devuelve el número de reservas grupales activas de un socio en una semana natural.
+    *   **FUNC-05 (`fn_puede_dispensar_bebida`):** Comprueba si un socio cumple el plan y el margen de 45 minutos para usar la máquina de bebidas.
+
+*   **Procedimientos almacenados (`CREATE PROCEDURE`):**
+    *   **PROC-01 (`sp_registrar_socio_con_subscripcion`):** Da de alta un nuevo socio junto con su suscripción inicial.
+    *   **PROC-02 (`sp_comprar_bono`):** Registra la compra de un bono y suma las sesiones adquiridas al saldo del socio.
+    *   **PROC-03 (`sp_validar_acceso_torno`):** Evalúa el estado y pago del socio al leer su QR y registra el acceso en el torno.
+    *   **PROC-04 (`sp_cancelar_sesion_entreno`):** Cancela una cita pendiente con entrenador personal y devuelve 1 sesión al saldo del socio.
+    *   **PROC-05 (`sp_renovar_subscripcion`):** Actualiza el estado de pago a `PAGADO`, extiende la renovación 1 mes y reactiva al socio.
+
+*   **Constraints declarativas (`PRIMARY KEY`, `UNIQUE`, `FOREIGN KEY`, `CHECK`):**
+    *   **CONST-01:** Claves Primarias (`PRIMARY KEY`) de las 14 tablas del modelo relacional.
+    *   **CONST-02:** Restricción `UNIQUE` sobre `Socios(email)`.
+    *   **CONST-03:** Restricción `UNIQUE` sobre `Subscripciones(dni_socio)` para garantizar la cardinalidad `1:1`.
+    *   **CONST-04:** Restricción `UNIQUE` sobre `Empleados(email)`.
+    *   **CONST-05 (`fk_sub_socio`):** Clave Ajena de `Subscripciones(dni_socio)` referenciando a `Socios(dni)`.
+    *   **CONST-06 (`fk_mon_emp`):** Clave Ajena de `Monitores(dni)` referenciando a `Empleados(dni)` (jerarquía).
+    *   **CONST-07 (`fk_ent_emp`):** Clave Ajena de `EntrenadoresPersonales(dni)` referenciando a `Empleados(dni)` (jerarquía).
+    *   **CONST-08 (`fk_clase_sala`):** Clave Ajena de `ClasesDirigidas(id_sala)` referenciando a `Salas(id)`.
+    *   **CONST-09 (`fk_clase_mon`):** Clave Ajena de `ClasesDirigidas(dni_monitor)` referenciando a `Monitores(dni)`.
+    *   **CONST-10 (`fk_res_socio`):** Clave Ajena de `ReservasGrupales(dni_socio)` referenciando a `Socios(dni)`.
+    *   **CONST-11 (`fk_res_clase`):** Clave Ajena de `ReservasGrupales(id_clase)` referenciando a `ClasesDirigidas(id)`.
+    *   **CONST-12 (`fk_bono_socio`):** Clave Ajena de `Bonos(dni_socio)` referenciando a `Socios(dni)`.
+    *   **CONST-13 (`fk_ses_socio`):** Clave Ajena de `SesionesEntreno(dni_socio)` referenciando a `Socios(dni)`.
+    *   **CONST-14 (`fk_ses_ent`):** Clave Ajena de `SesionesEntreno(dni_entrenador)` referenciando a `EntrenadoresPersonales(dni)`.
+    *   **CONST-15 (`fk_venta_socio`):** Clave Ajena de `Ventas(dni_socio)` referenciando a `Socios(dni)`.
+    *   **CONST-16 (`fk_venta_prod`):** Clave Ajena de `Ventas(id_producto)` referenciando a `Productos(id)`.
+    *   **CONST-17 (`fk_disp_socio`):** Clave Ajena de `DispensacionesBebida(dni_socio)` referenciando a `Socios(dni)`.
+    *   **CONST-18 (`fk_acc_socio`):** Clave Ajena de `Accesos(dni_socio)` referenciando a `Socios(dni)`.
+    *   **CONST-19 (`chk_saldo_sesiones`):** `CHECK (saldo_sesiones >= 0)` en `Socios`.
+    *   **CONST-20 (`chk_aforo_sala`):** `CHECK (aforo_maximo > 0)` en `Salas`.
+    *   **CONST-21 (`chk_duracion_clase`):** `CHECK (duracion_mins > 0)` en `ClasesDirigidas`.
+    *   **CONST-22 (`chk_bono_sesiones`, `chk_bono_precio`):** `CHECK (n_sesiones_incluidas > 0)` y `CHECK (precio >= 0)` en `Bonos`.
+    *   **CONST-23 (`chk_duracion_sesion`):** `CHECK (duracion > 0)` en `SesionesEntreno`.
+    *   **CONST-24 (`chk_prod_stock`, `chk_prod_precio`):** `CHECK (stock >= 0)` y `CHECK (precio_unitario > 0)` en `Productos`.
+    *   **CONST-25 (`chk_venta_cant`, `chk_venta_dto`):** `CHECK (cantidad > 0)` y `CHECK (porcentaje_descuento BETWEEN 0 AND 100)` en `Ventas`.
+    *   **CONST-26 (`chk_disp_vol`):** `CHECK (volumen > 0)` en `DispensacionesBebida`.
 
 ## 9. Scripts
 
